@@ -1,9 +1,23 @@
 /* 이현민 2024 css 리셋 */
+/* 사이즈는 rem */
+/* 모바일에서 원래 폰트 크기 출력, 모바일 터치시 검은색 영역X  */
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
 /* border-box 이용 크기 조정 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* 폰트 크기 고장 방지 */
@@ -12,19 +26,9 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
-
-/* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
+/* rem px 1:1 대응 */
+html {
+  font-size: 62.5%;
 }
 
 /* list기본 스타일 제거 */
@@ -44,10 +48,9 @@ ol[role='list'] {
 /* 모바일 주소바를 위한 dvh사용 */
 body {
   min-height: 100dvh;
-  line-height: 1.5;
 }
 
-/* Set shorter line heights on headings and interactive elements */
+/* 제목과 인터랙션 요소는 더짧게  */
 h1,
 h2,
 h3,
@@ -57,11 +60,8 @@ input,
 label {
   line-height: 1.1;
 }
-/* 한글은 자간 음수로 */
-.kor {
-  letter-spacing: -0.2;
-}
-/* Balance text wrapping on headings */
+
+/* balance 최신속성을 이용해서 제목 자르기  */
 h1,
 h2,
 h3,
@@ -69,33 +69,40 @@ h4 {
   text-wrap: balance;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
+/* 이미지,사진 태그 활용하기 쉽게*/
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
+/* 폰트 속성 상속받기 따로 폰트설정을 할 필요 없음. */
 input,
 button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
+/* a태그 대상에게 스타일을 적용하는 가상클래스 target 페이지 이동시 여백이 있어야함 */
 :target {
-  scroll-margin-block: 5ex;
+  scroll-margin-block: 1rem;
+}
+
+/* 한글은 자간 음수로 */
+.kor {
+  letter-spacing: -0.2;
+}
+
+/* 버튼 태그 초기화 */
+button {
+  background-color: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* a 태그 밑줄 삭제 */
+a {
+  text-decoration: none;
 }
