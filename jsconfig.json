@@ -1,3 +1,14 @@
 {
-  "extends": "./jsconfig.paths.json"
+  "extends": "./jsconfig.paths.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@styles/*": ["styles"],
+      "@assets/*": ["assets/*"],
+      "@font/*": ["assets/font/*"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["containers/layouts/*"],
+      "@views/*": ["containers/views/*"]
+    }
+  }
 }
