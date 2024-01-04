@@ -46,8 +46,13 @@ ol[role='list'] {
 
 /* 가독성을위한 line-height 1.5 상속 시키기  */
 /* 모바일 주소바를 위한 dvh사용 */
+/* 폰트최적화 프리텐다드 */
 body {
   min-height: 100dvh;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
 }
 
 /* 제목과 인터랙션 요소는 더짧게  */
