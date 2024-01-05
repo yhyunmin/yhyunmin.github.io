@@ -1,10 +1,10 @@
 import { css } from 'styled-components';
 
-import PretendardBold from '../assets/font/Pretendard-Bold.woff2';
-import PretendardRegular from '../assets/font/Pretendard-Regular.woff2';
-import PretendardExtraLight from '../assets/font/Pretendard-ExtraLight.woff2';
-import PretendardSemiBold from '../assets/font/Pretendard-SemiBold.woff2';
-import D2Coding from '../assets/font/D2Coding.woff2';
+import PretendardBold from '@font/Pretendard-Bold.woff2';
+import PretendardRegular from '@font/Pretendard-Regular.woff2';
+import PretendardExtraLight from '@font/Pretendard-ExtraLight.woff2';
+import PretendardSemiBold from '@font/Pretendard-SemiBold.woff2';
+import D2Coding from '@font/D2Coding.woff2';
 // import PretendardBold from '@font/Pretendard-Bold.woff2';
 // import PretendardRegular from '@font/Pretendard-Regular.woff2';
 // import PretendardExtraLight from '@font/Pretendard-ExtraLight.woff2';
