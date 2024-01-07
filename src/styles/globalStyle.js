@@ -6,6 +6,8 @@ ${font}
 /* rem px 1:1 대응 */
 html {
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 h1,
 h2,
