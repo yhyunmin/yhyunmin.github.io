@@ -48,6 +48,26 @@ const main = () => {
           </li>
         </ul>
       </aside>
+      <aside>
+        최근 본 포스트
+        <ul>
+          <li>최근 본 포스트1</li>
+          <li>최근 본 포스트2</li>
+          <li>최근 본 포스트3</li>
+          <li>최근 본 포스트4</li>
+          <li>최근 본 포스트5</li>
+        </ul>
+      </aside>
+      <main>
+        <section className='articleList'>
+          <Link>
+            <article className='article'>
+              <h2>포스트 제목1</h2>
+              <h3>Subtitle</h3>
+            </article>
+          </Link>
+        </section>
+      </main>
     </div>
   );
 };
