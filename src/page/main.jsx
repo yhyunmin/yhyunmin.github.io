@@ -5,21 +5,25 @@ const main = () => {
   return (
     <div>
       <header>
-        <h1>
-          이현민 블로그
-          <Link>
-            <img src={'./img/logo.png'} alt='이현민 블로그 로고' />
-          </Link>
+        <h1 className='hidingTexts'>
+          이현민 블로그1
+          {/* <Link to='/'> */}
+          <img src={''} alt='이현민 블로그 로고' />
+          {/* </Link> */}
         </h1>
         <h2>Hyumin Yi</h2>
         <p>안녕하세요. 이현민 입니다. </p>
         <nav>
           <ul>
             <li>
-              <Link>Articles</Link>
+              {/* <Link to='/'> */}
+              Articles
+              {/* </Link> */}
             </li>
             <li>
-              <Link>About Me</Link>
+              {/* <Link to='/'> */}
+              About Me
+              {/* </Link> */}
             </li>
           </ul>
         </nav>
@@ -49,7 +53,7 @@ const main = () => {
         </ul>
       </aside>
       <aside>
-        최근 본 포스트
+        <h2>최근 본 포스트</h2>
         <ul>
           <li>최근 본 포스트1</li>
           <li>최근 본 포스트2</li>
@@ -60,12 +64,17 @@ const main = () => {
       </aside>
       <main>
         <section className='articleList'>
-          <Link>
-            <article className='article'>
-              <h2>포스트 제목1</h2>
-              <h3>Subtitle</h3>
-            </article>
-          </Link>
+          <h2>Articles</h2>
+          <ul>
+            <li>
+              {/* <Link to='/'> */}
+              <article className='article'>
+                <h3>포스트 제목1</h3>
+                <p>Subtitle</p>
+              </article>
+              {/* </Link> */}
+            </li>
+          </ul>
         </section>
       </main>
     </div>

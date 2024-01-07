@@ -34,6 +34,7 @@ h3 {
 h4 {
   font-size: 1.8rem;
 }
+li,
 span,
 p {
   font-size: 1.6rem;
@@ -44,6 +45,13 @@ button {
 /* 다크모드 반응 코드 */
 body {
   background-color: ${({ theme }) => theme.bgc};
+}
+
+/* 태그의 텍스트 없애기  */
+.hidingTexts {
+  text-indent:100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 `;
 

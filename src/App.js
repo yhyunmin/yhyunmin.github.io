@@ -4,6 +4,7 @@ import { lightTheme, darkTheme } from '@styles/theme';
 //app.css
 import './App.css';
 import { useState } from 'react';
+import Main from './page/Main';
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -21,7 +22,7 @@ function App() {
         <h4>1.8rem</h4>
         <p>p와 span은 1.6rem</p>
         <p>현재 제작중에 있습니다</p>
-
+        <Main />
         <button onClick={onClickBtn}>다크모드</button>
       </ThemeProvider>
     </div>
