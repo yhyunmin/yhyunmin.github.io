@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import { RouterProvider } from 'react-router-dom';
 import router from './router/routes';
+import Loading from './components/Loading/Loading';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} fallbackElement={<div>Loading</div>}>
+  <RouterProvider router={router} fallbackElement={<Loading />}>
     <App />
   </RouterProvider>
 );
