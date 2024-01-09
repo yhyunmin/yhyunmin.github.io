@@ -9,6 +9,12 @@ const Icon = styled.li`
   &:hover {
     background-color: #0001;
   }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 `;
 const ContactIcon = ({ href, icon, ...props }) => {
   return (

@@ -5,7 +5,7 @@ import { styled } from 'styled-components';
 
 const Container = styled.ul`
   display: flex;
-  gap: 8px;
+  gap: 4px;
 `;
 const ContactsList = () => {
   const MyContact = myContactList.map(contact => (
@@ -13,7 +13,7 @@ const ContactsList = () => {
       key={contact.id}
       href={contact.href}
       icon={contact.icon}
-      width={36}
+      width={24}
     />
   ));
   return <Container>{MyContact}</Container>;

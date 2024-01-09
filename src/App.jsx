@@ -3,15 +3,12 @@ import GlobalStyle from '@styles/GlobalStyle';
 import { lightTheme, darkTheme } from '@styles/theme';
 //app.css
 import './App.css';
-import { useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import router from './router/routes';
 import Loading from '@components/Loading/Loading';
+import useThemeStore from './store/ThemeStore';
 function App() {
-  const [theme, setTheme] = useState(true);
-  const onClickBtn = () => {
-    setTheme(!theme);
-  };
+  const { theme } = useThemeStore();
   return (
     <div className='App'>
       <ThemeProvider theme={theme ? lightTheme : darkTheme}>

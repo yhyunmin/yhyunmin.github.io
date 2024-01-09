@@ -16,7 +16,7 @@ const Container = styled.main`
 const HeaderLayout = styled(Header)`
   /* css */
   width: 32.9rem;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   flex-direction: column;
   gap: 16px;
