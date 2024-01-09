@@ -6,8 +6,7 @@ import './App.css';
 import { useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import router from './router/routes';
-import Loading from './components/Loading/Loading';
-
+import Loading from '@components/Loading/Loading';
 function App() {
   const [theme, setTheme] = useState(true);
   const onClickBtn = () => {
@@ -17,9 +16,7 @@ function App() {
     <div className='App'>
       <ThemeProvider theme={theme ? lightTheme : darkTheme}>
         <GlobalStyle />
-        <RouterProvider
-          router={router}
-          fallbackElement={<Loading />}></RouterProvider>
+        <RouterProvider router={router} fallbackElement={<Loading />} />
       </ThemeProvider>
     </div>
   );

@@ -27,6 +27,7 @@ h1 {
 }
 h2 {
   font-size:2.2rem;
+  color: red !important;
 }
 h3 {
   font-size: 2.0rem;

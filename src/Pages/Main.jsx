@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import profileImg from '@img/profile.png';
 
-const main = () => {
+const Main = () => {
   return (
     <div>
       <header>
         <h1 className='hidingTexts'>
           이현민 블로그1
           {/* <Link to='/'> */}
-          <img src={''} alt='이현민 블로그 로고' />
+          <img src={profileImg} alt='이현민 블로그 로고' />
           {/* </Link> */}
         </h1>
         <h2>Hyumin Yi</h2>
@@ -81,4 +82,4 @@ const main = () => {
   );
 };
 
-export default main;
+export default Main;

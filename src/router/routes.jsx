@@ -1,12 +1,12 @@
 import { createHashRouter } from 'react-router-dom';
-import App from 'src/App';
+import Main from 'src/Pages/Main';
 import Post from 'src/Pages/Post';
 
 const router = createHashRouter(
   [
     {
       path: '/',
-      element: <App />,
+      element: <Main />,
       loader: async () => {
         return new Promise(resolve => {
           setTimeout(() => {
