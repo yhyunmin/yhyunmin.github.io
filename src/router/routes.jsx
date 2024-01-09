@@ -1,6 +1,6 @@
 import { createHashRouter } from 'react-router-dom';
 import App from 'src/App';
-import Post from 'src/page/Post';
+import Post from 'src/Pages/Post';
 
 const router = createHashRouter(
   [
