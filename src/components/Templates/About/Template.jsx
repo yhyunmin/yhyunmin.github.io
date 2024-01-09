@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from './../../Organisms/Header/Header';
-import ArticleList from '@components/Organisms/ArticleList/ArticleList';
 import { styled } from 'styled-components';
-import { Outlet } from 'react-router-dom';
 
 const Container = styled.main`
   margin: 0 auto;
@@ -11,7 +9,7 @@ const Container = styled.main`
   display: flex;
   justify-content: space-between;
   width: 144rem;
-  height: 100vh;
+  height: 100%;
   background-color: tan;
 `;
 const HeaderLayout = styled(Header)`
@@ -25,7 +23,6 @@ const HeaderLayout = styled(Header)`
 const ContentsLayout = styled.main`
   width: 92.4rem;
   background-color: blue;
-  color: white;
 `;
 
 const Template = () => {
@@ -34,7 +31,7 @@ const Template = () => {
       <Container>
         <HeaderLayout />
         <ContentsLayout>
-          <Outlet />
+          <h2>Here is About page</h2>
         </ContentsLayout>
       </Container>
     </>

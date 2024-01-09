@@ -1,11 +1,12 @@
 import { createBrowserRouter, createHashRouter } from 'react-router-dom';
 import Main from 'src/Pages/Main';
 import Post from 'src/Pages/Post';
-import About from 'src/Pages/About';
+import ArticleList from '@components/Organisms/ArticleList/ArticleList';
+import About from './../components/Organisms/About/About';
 const router = createBrowserRouter(
   [
     {
-      path: '/',
+      path: '',
       element: <Main />,
       loader: async () => {
         return new Promise(resolve => {
@@ -14,11 +15,14 @@ const router = createBrowserRouter(
           }, 1000);
         });
       },
-      children: [{ path: '/:postId', element: <Post /> }],
-    },
-    {
-      path: 'about',
-      element: <About />,
+      children: [
+        { path: '/', element: <ArticleList /> },
+        { path: '/:postId', element: <About /> },
+        {
+          path: 'about',
+          element: <About />,
+        },
+      ],
     },
   ],
   { basename: '/' }
