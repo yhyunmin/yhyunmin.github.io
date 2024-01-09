@@ -27,7 +27,6 @@ h1 {
 }
 h2 {
   font-size:2.2rem;
-  color: red !important;
 }
 h3 {
   font-size: 2.0rem;
@@ -53,6 +52,8 @@ body {
   text-indent:100%;
   white-space: nowrap;
   overflow: hidden;
+  user-select: none;
+  font-size: 0.1px;
 }
 `;
 

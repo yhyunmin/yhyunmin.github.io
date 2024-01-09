@@ -1,41 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profileImg from '@img/profile.png';
+import Template from '@components/Templates/Main/Template';
 
 const Main = () => {
   return (
     <div>
-      <header>
-        <h1 className='hidingTexts'>
-          이현민 블로그1
-          {/* <Link to='/'> */}
-          <img src={profileImg} alt='이현민 블로그 로고' />
-          {/* </Link> */}
-        </h1>
-        <h2>Hyumin Yi</h2>
-        <p>안녕하세요. 이현민 입니다. </p>
-        <nav>
-          <ul>
-            <li>
-              {/* <Link to='/'> */}
-              Articles
-              {/* </Link> */}
-            </li>
-            <li>
-              {/* <Link to='/'> */}
-              About Me
-              {/* </Link> */}
-            </li>
-          </ul>
-        </nav>
-        <article>
-          <ul>
-            <li>github link</li>
-            <li>resume</li>
-            <li>email</li>
-          </ul>
-        </article>
-      </header>
+      <Template />
       <aside>
         <input type='text' />
         <ul>
