@@ -19,7 +19,7 @@ const Main = () => {
           </li>
           <li>
             react<span>3</span>
-          </li>
+          </li>n
           <li>
             zustand<span>1</span>
           </li>
@@ -35,7 +35,6 @@ const Main = () => {
           <li>최근 본 포스트5</li>
         </ul>
       </aside>
-     
     </div>
   );
 };

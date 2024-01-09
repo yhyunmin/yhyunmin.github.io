@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '@components/Atoms/Logo/Logo';
 import Nav from './../../Molecules/Nav/Nav';
+import ContactList from '../../Molecules/ContactList/ContactList';
 
 const Header = ({ className }) => {
   return (
@@ -11,11 +12,7 @@ const Header = ({ className }) => {
         <p>안녕하세요. 이현민 입니다. </p>
         <Nav />
         <article>
-          <ul>
-            <li>github link</li>
-            <li>resume</li>
-            <li>email</li>
-          </ul>
+          <ContactList />
         </article>
       </header>
     </>
