@@ -1,8 +1,8 @@
-import { createHashRouter } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter } from 'react-router-dom';
 import Main from 'src/Pages/Main';
 import Post from 'src/Pages/Post';
-
-const router = createHashRouter(
+import About from 'src/Pages/About';
+const router = createBrowserRouter(
   [
     {
       path: '/',
@@ -15,6 +15,10 @@ const router = createHashRouter(
         });
       },
       children: [{ path: '/:postId', element: <Post /> }],
+    },
+    {
+      path: 'about',
+      element: <About />,
     },
   ],
   { basename: '/' }
