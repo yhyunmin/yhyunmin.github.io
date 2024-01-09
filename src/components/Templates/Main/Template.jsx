@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './../../Organisms/Header/Header';
-import ArticleList from '@components/Organisms/ArticleList/ArticleList';
 import { styled } from 'styled-components';
 import { Outlet } from 'react-router-dom';
 

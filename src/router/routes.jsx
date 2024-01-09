@@ -3,6 +3,7 @@ import Main from 'src/Pages/Main';
 import Post from 'src/Pages/Post';
 import ArticleList from '@components/Organisms/ArticleList/ArticleList';
 import About from './../components/Organisms/About/About';
+import Error from 'src/Pages/Error';
 const router = createBrowserRouter(
   [
     {
@@ -17,13 +18,14 @@ const router = createBrowserRouter(
       },
       children: [
         { path: '/', element: <ArticleList /> },
-        { path: '/:postId', element: <About /> },
+        { path: 'post/:id', element: <Post /> },
         {
           path: 'about',
           element: <About />,
         },
       ],
     },
+    { path: '/*', element: <Error /> },
   ],
   { basename: '/' }
 );
