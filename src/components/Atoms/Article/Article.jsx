@@ -10,7 +10,7 @@ const ReadMore = styled.p``;
 const Article = () => {
   return (
     <article>
-      <Dates>JANUARY 2024</Dates> <span className='tag'>ReactRouter</span>
+      <Dates>JANUARY 2024</Dates> <Tag className='tag'>ReactRouter</Tag>
       <Title>
         React Router - createBrowserRouter 에서 createHashRouter 그리고
       </Title>
