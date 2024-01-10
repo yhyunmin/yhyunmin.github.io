@@ -1,12 +1,21 @@
 import React from 'react';
+import { styled } from 'styled-components';
+
+const Dates = styled.time``;
+const Tag = styled.span``;
+const Title = styled.h2``;
+const Subtitle = styled.h3``;
+const ReadMore = styled.p``;
 
 const Article = () => {
   return (
     <article>
-      <time>JANUARY 2024</time> <span className='tag'>ReactRouter</span>
-      <h2>React Router - createBrowserRouter 에서 createHashRouter 그리고</h2>
-      <h3>data API 이용하여 router 사용 해보기 </h3>
-      <p>Read more</p>
+      <Dates>JANUARY 2024</Dates> <span className='tag'>ReactRouter</span>
+      <Title>
+        React Router - createBrowserRouter 에서 createHashRouter 그리고
+      </Title>
+      <Subtitle>data API 이용하여 router 사용 해보기 </Subtitle>
+      <ReadMore>Read more</ReadMore>
     </article>
   );
 };
