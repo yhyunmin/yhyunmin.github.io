@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Main from 'src/pages/Main';
-import Post from 'src/pages/Post';
+import Main from '@pages/Main';
+import Post from '@pages/Post';
 import ArticleList from '@components/Organisms/ArticleSection/ArticleSection';
 import About from '@components/Organisms/About/About';
 import Error from '@pages/Error';

@@ -5,7 +5,9 @@ import ContactList from '../../Molecules/ContactList/ContactList';
 import DarkTheme from '@components/Atoms/DarkTheme/DarkTheme';
 import TagList from '@components/Molecules/TagList/TagList';
 
+import useThemeStore from 'src/store/ThemeStore';
 const Header = ({ className }) => {
+  const { toggleTheme } = useThemeStore();
   return (
     <>
       <header className={className}>
@@ -16,7 +18,7 @@ const Header = ({ className }) => {
           <ContactList />
         </article>
         <Nav />
-        <DarkTheme />
+        <DarkTheme onClick={toggleTheme} />
         <TagList />
       </header>
     </>

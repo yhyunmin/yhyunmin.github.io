@@ -6,6 +6,7 @@ import { styled } from 'styled-components';
 const Container = styled.ul`
   display: flex;
   gap: 4px;
+  justify-content: flex-start;
 `;
 const ContactsList = () => {
   const MyContact = myContactList.map(contact => (
