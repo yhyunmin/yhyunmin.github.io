@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArticleList = ({ className }) => {
+const ArticleSection = ({ className }) => {
   return (
     <main>
       <section className={className}>
@@ -9,7 +9,7 @@ const ArticleList = ({ className }) => {
           <li>
             {/* <Link to='/'> */}
             <article className='article'>
-              <h3>포스트 제목1</h3>
+              <h3>ArticleSection입니다</h3>
               <p>Subtitle</p>
             </article>
             {/* </Link> */}
@@ -20,4 +20,4 @@ const ArticleList = ({ className }) => {
   );
 };
 
-export default ArticleList;
+export default ArticleSection;

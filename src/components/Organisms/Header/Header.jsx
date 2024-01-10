@@ -3,6 +3,7 @@ import Logo from '@components/Atoms/Logo/Logo';
 import Nav from './../../Molecules/Nav/Nav';
 import ContactList from '../../Molecules/ContactList/ContactList';
 import DarkTheme from '@components/Atoms/DarkTheme/DarkTheme';
+import TagList from '@components/Molecules/TagList/TagList';
 
 const Header = ({ className }) => {
   return (
@@ -16,6 +17,7 @@ const Header = ({ className }) => {
         </article>
         <Nav />
         <DarkTheme />
+        <TagList />
       </header>
     </>
   );

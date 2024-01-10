@@ -1,9 +1,9 @@
-import { createBrowserRouter, createHashRouter } from 'react-router-dom';
-import Main from 'src/Pages/Main';
-import Post from 'src/Pages/Post';
-import ArticleList from '@components/Organisms/ArticleList/ArticleList';
-import About from './../components/Organisms/About/About';
-import Error from 'src/Pages/Error';
+import { createBrowserRouter } from 'react-router-dom';
+import Main from 'src/pages/Main';
+import Post from 'src/pages/Post';
+import ArticleList from '@components/Organisms/ArticleSection/ArticleSection';
+import About from '@components/Organisms/About/About';
+import Error from '@pages/Error';
 const router = createBrowserRouter(
   [
     {
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
         return new Promise(resolve => {
           setTimeout(() => {
             return resolve('loading done');
-          }, 1000);
+          }, 400);
         });
       },
       children: [

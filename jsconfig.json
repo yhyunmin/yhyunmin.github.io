@@ -7,6 +7,7 @@
       "@font/*": ["src/assets/font/*"],
       "@img/*": ["src/assets/img/*"],
       "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
       "@layouts/*": ["src/containers/layouts/*"],
       "@views/*": ["src/containers/views/*"]
     }

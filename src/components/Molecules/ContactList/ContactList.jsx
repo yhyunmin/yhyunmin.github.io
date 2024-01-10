@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactIcon from '../../Atoms/ContactIcon/ContactIcon';
-import myContactList from 'src/Constants/Contacts';
+import myContactList from 'src/constants/Contacts';
 import { styled } from 'styled-components';
 
 const Container = styled.ul`
