@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.795f3340.css",
-    "main.js": "/static/js/main.1b77d9b7.js",
+    "main.css": "/static/css/main.1703fdd6.css",
+    "main.js": "/static/js/main.5458e5f8.js",
+    "static/media/Hans.ttf": "/static/media/Hans.4dee6b65a0cac70d4a80.ttf",
     "static/media/D2Coding.woff2": "/static/media/D2Coding.626cbbbbca60e9d87df5.woff2",
     "static/media/Pretendard-Bold.woff2": "/static/media/Pretendard-Bold.0c6f5e225ff28f456183.woff2",
     "static/media/Pretendard-SemiBold.woff2": "/static/media/Pretendard-SemiBold.d5ded8ad2884e7855bb1.woff2",
     "static/media/Pretendard-Regular.woff2": "/static/media/Pretendard-Regular.38bed7de46e7b9049ced.woff2",
     "static/media/Pretendard-ExtraLight.woff2": "/static/media/Pretendard-ExtraLight.6a3dddfd84c05761ef44.woff2",
+    "static/media/profile.png": "/static/media/profile.ccb24500ac736a539601.png",
+    "static/media/mdi_mail.svg": "/static/media/mdi_mail.2abae4c934a2790fccf2b0cd854b8142.svg",
+    "static/media/mdi_github.svg": "/static/media/mdi_github.ad7736253c92626cbdde7a0b0cb3cb30.svg",
     "index.html": "/index.html",
-    "main.795f3340.css.map": "/static/css/main.795f3340.css.map",
-    "main.1b77d9b7.js.map": "/static/js/main.1b77d9b7.js.map"
+    "static/media/mdi_resume.svg": "/static/media/mdi_resume.f174c6224f02ecf9e80a985d743cf41c.svg",
+    "main.1703fdd6.css.map": "/static/css/main.1703fdd6.css.map",
+    "main.5458e5f8.js.map": "/static/js/main.5458e5f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.795f3340.css",
-    "static/js/main.1b77d9b7.js"
+    "static/css/main.1703fdd6.css",
+    "static/js/main.5458e5f8.js"
   ]
 }
