@@ -11,7 +11,8 @@
       "@layouts/*": ["src/containers/layouts/*"],
       "@views/*": ["src/containers/views/*"],
       "@libs/*": ["src/libs/*"],
-      "@router/*": ["src/router/*"]
+      "@router/*": ["src/router/*"],
+      "@md/*": ["src/contents/*"]
     }
   }
 }
