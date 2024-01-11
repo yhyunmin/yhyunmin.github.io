@@ -9,7 +9,9 @@
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@layouts/*": ["src/containers/layouts/*"],
-      "@views/*": ["src/containers/views/*"]
+      "@views/*": ["src/containers/views/*"],
+      "@libs/*": ["src/libs/*"],
+      "@router/*": ["src/router/*"]
     }
   }
 }

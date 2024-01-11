@@ -26,6 +26,7 @@ const router = createBrowserRouter(
       ],
     },
     { path: '/*', element: <Error /> },
+    { path: '/sitemap.xml', element: <div>sitemap</div> },
   ],
   { basename: '/' }
 );
