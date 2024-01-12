@@ -7,7 +7,7 @@ const Title = styled.h2``;
 const Subtitle = styled.h3``;
 const ReadMore = styled.p``;
 
-const Article = () => {
+const Article = ({ attributes }) => {
   return (
     <article>
       <Dates>JANUARY 2024</Dates> <Tag className='tag'>ReactRouter</Tag>
