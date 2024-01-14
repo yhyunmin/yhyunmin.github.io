@@ -1,35 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import fm from 'front-matter';
-const ArticleList2 = () => {
-  const [content, setContent] = useState();
-  const mdfiles = require.context('../../../contents', false, /\.md$/).keys();
-  // useEffect(() => {
-  //   mdfiles.map(mdfile => {
-  //     const mdFile = mdfile.replace(/^\.\//, '');
-  //     console.log(mdFile);
-  //     import(`../../../contents/${mdFile}`).then(res => {
-  //       fetch(res.default)
-  //         .then(res => res.text())
-  //         .then(res => setContent([...content, res]))
-  //         .catch(err => console.log(err));
-  //       console.log(res.default, 'default');
-  //     });
-  //   });
-  //   console.log(content, 'conte2nt');
-  // }, []);
-  useEffect(() => {
-    const md = require('../../../contents/2023-05-20--test.md');
-    console.log(md);
 
-    fetch(md)
-      .then(res => res.text()) // Return the text Promise
-      .then(text => {
-        setContent(text);
-        console.log(content, 'content1');
-        fm(content);
-        console.log(fm(content).attributes);
-      });
-  }, [content]);
+const ArticleList2 = () => {
+  const [mds, setMds] = useState([]);
+  const [content, setContent] = useState([]);
+  const context = require.context('../../../contents', false, /\.md$/).keys();
+  const mdFiles = context.map(file => file.replace(/^\.\//, ''));
+
+  const fetchingData = useCallback(() => {
+    mdFiles.forEach(mdFile => {
+      console.log(`../../../contents/${mdFile}`);
+      import(`../../../contents/${mdFile}`)
+        .then(res => {
+          console.log(res.default, 'res.default');
+          fetch(res.deafult);
+        })
+        .then(res => {
+          console.log(res, 'res');
+          res.text();
+        })
+        .then(res => {
+          setMds(prev => [...prev, res]).catch(err => console.log(err));
+        });
+    });
+  }, [mdFiles]);
+
+  useEffect(() => {
+    fetchingData();
+    console.log(mds, 'mds');
+  }, [fetchingData, mds]);
+
+  useEffect(() => {
+    mds.forEach(md => {
+      const frontMatter = fm(md); // frontMatter.attributes, frontMatter.body
+      setContent([...content, frontMatter]);
+    });
+  }, [content, mds]);
+
   return <div></div>;
 };
 
