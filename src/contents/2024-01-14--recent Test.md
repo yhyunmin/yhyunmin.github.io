@@ -1,5 +1,5 @@
 ---
-title: '내가 몰라서 적는 Redux2'
+title: '내가 몰라서 적는 Redux3'
 date: '2023-05-20'
 slug: '/articles/내가-몰라서-적는-Redux2'
 tags: 'Redux'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 
 const Dates = styled.time``;
@@ -7,13 +7,19 @@ const Title = styled.h2``;
 const Subtitle = styled.h3``;
 const ReadMore = styled.p``;
 
-const Article = contents => {
+const Article = ({ attributes = {} }) => {
+  console.log(attributes, 'attirbutes');
   return (
     <article>
-      <Dates>{}</Dates> <Tag className='tag'>{}</Tag>
-      <Title>{}</Title>
-      <Subtitle>{} </Subtitle>
-      <ReadMore>{}</ReadMore>
+      {attributes && (
+        <>
+          <Dates>{attributes.date}</Dates>
+          <Tag className='tag'>{attributes.tags}</Tag>
+          <Title>{attributes.title}</Title>
+          <Subtitle>{attributes.description} </Subtitle>
+          <ReadMore>Read More</ReadMore>
+        </>
+      )}
     </article>
   );
 };
