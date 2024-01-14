@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '@pages/Main';
 import Post from '@pages/Post';
-import ArticleList from '@components/Organisms/ArticleSection/ArticleSection';
+import ArticleSection from '@components/Organisms/ArticleSection/ArticleSection';
 import About from '@components/Organisms/About/About';
 import Error from '@pages/Error';
 const router = createBrowserRouter(
@@ -17,7 +17,7 @@ const router = createBrowserRouter(
         });
       },
       children: [
-        { path: '/', element: <ArticleList /> },
+        { path: '/', element: <ArticleSection /> },
         { path: 'post/:id', element: <Post /> },
         {
           path: 'about',
