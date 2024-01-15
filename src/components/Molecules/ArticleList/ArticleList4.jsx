@@ -8,7 +8,7 @@ const fetchMdData = async () => {
   const context = require.context('src/contents', false, /\.md$/).keys();
   const fileNames = context.map(file_name => file_name.replace(/^\.\//, ''));
   const promises = fileNames.map(async file_name => {
-    const module = await import(`../../../contents/${file_name}`);
+    const module = await import(`src/contents/${file_name}`);
     const response = await fetch(module.default);
     return response.text();
   });
