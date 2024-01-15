@@ -6,10 +6,12 @@ import Article from '@components/Atoms/Article/Article';
 
 const fetchMdData = async () => {
   const context = await require.context('src/contents', false, /\.md$/).keys();
-  await console.log(context);
-  const fileNames = await context.map(file_name =>
-    file_name.replace(/^\.\//, '')
-  );
+  console.log(context);
+  const fileNames = await context.map(file_name => {
+    console.log(file_name.replace(/^\.\/|\.md$/g, ''));
+    return file_name.replace(/^\.\/|\.md$/g, ''); // gh-pages
+    // return file_name.replace(/^\.\//, ''); // 개발 
+  });
   const promises = fileNames.map(async file_name => {
     const module = await import(`src/contents/${file_name}`);
     const response = await fetch(module.default);
