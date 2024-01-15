@@ -19,7 +19,7 @@ const fetchMdData = async () => {
   // });
   const promises = fileNamesForGhPages.map(async file_name => {
     console.log(file_name, 'file_name');
-    const module = await import(`src/contents/${file_name}`);
+    const module = await import(`../../../${file_name}.md`);
     console.log(module, 'module');
     const response = await fetch(module.default);
     return response.text();
