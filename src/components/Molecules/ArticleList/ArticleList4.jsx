@@ -5,7 +5,7 @@ import Article from '@components/Atoms/Article/Article';
 //  todo : dynamic import를 이용하여 최적화
 
 const fetchMdData = async () => {
-  const context = require.context('../../../contents', false, /\.md$/).keys();
+  const context = require.context('src/contents', false, /\.md$/).keys();
   const fileNames = context.map(file_name => file_name.replace(/^\.\//, ''));
   const promises = fileNames.map(async file_name => {
     const module = await import(`../../../contents/${file_name}`);
