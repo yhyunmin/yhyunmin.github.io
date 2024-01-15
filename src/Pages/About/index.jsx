@@ -1,10 +1,9 @@
 import React from 'react';
-import Template from '@components/Templates/About/Template';
+// import Template from '@components/Templates/About/Template';
 
 const About = () => {
   return (
     <div>
-      <Template />
       <aside>
         <input type='text' />
         <ul>
