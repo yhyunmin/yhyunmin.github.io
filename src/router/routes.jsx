@@ -18,6 +18,7 @@ const router = createBrowserRouter(
       },
       children: [
         { path: '/', element: <ArticleSection /> },
+        { path: '/page/:page', element: <ArticleSection /> },
         { path: 'post/:id', element: <Post /> },
         {
           path: 'about',
