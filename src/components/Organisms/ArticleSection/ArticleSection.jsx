@@ -1,10 +1,10 @@
-import ArticleList4 from '@components/Molecules/ArticleList/ArticleList4';
+import ArticleList from '@components/Molecules/ArticleList/ArticleList';
 import React from 'react';
 
 const ArticleSection = ({ className }) => {
   return (
     <main className={className}>
-      <ArticleList4 />
+      <ArticleList />
     </main>
   );
 };
