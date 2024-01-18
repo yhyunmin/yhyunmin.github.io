@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './../../Organisms/Header/Header';
+import Header from '../../Organisms/Header/Header';
 import { styled } from 'styled-components';
 import { Outlet } from 'react-router-dom';
 

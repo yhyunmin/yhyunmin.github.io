@@ -11,7 +11,7 @@ const ArticleSection = ({ className }) => {
   const [currentItems, setCurrentItems] = useState([]);
   const navigate = useNavigate();
   const frontMatterDatas = useFrontMatter();
-  const fetchFrontMatter = useFrontMatterFetch();
+  // const fetchFrontMatter = useFrontMatterFetch();
 
   const numberItems = 6;
   // const totalPages = frontMatterDatas.length / numberItems;
@@ -28,26 +28,26 @@ const ArticleSection = ({ className }) => {
     //   return null;
     // }
     setCurrentPage(prev => prev + 1);
-    navigate(`/page/${currentPage + 1}`);
+    navigate(`/articles/page/${currentPage + 1}`);
   };
   const handlePrevPage = () => {
     // if (!(currentPage < totalPages)) {
     //   return null;
     // }
     setCurrentPage(prev => prev - 1);
-    navigate(`/page/${currentPage - 1}`);
+    navigate(`/articles/page/${currentPage - 1}`);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await fetchFrontMatter();
-    };
-    fetchData()
-      .then(() => {
-        console.log('done');
-      })
-      .catch(error => console.log(error));
-  }, [fetchFrontMatter]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     await fetchFrontMatter();
+  //   };
+  //   fetchData()
+  //     .then(() => {
+  //       console.log('done');
+  //     })
+  //     .catch(error => console.log(error));
+  // }, [fetchFrontMatter]);
 
   return (
     <main className={className}>

@@ -4,30 +4,29 @@ import Post from 'src/Pages/Post';
 import ArticleSection from '@components/Organisms/ArticleSection/ArticleSection';
 import About from '@components/Organisms/About/About';
 import Error from 'src/Pages/Error';
+import contextLoader from 'src/util/contextLoader';
 const router = createBrowserRouter(
   [
     {
-      path: '',
-      element: <Main />,
       loader: async () => {
-        return new Promise(resolve => {
-          setTimeout(() => {
-            return resolve('loading done');
-          }, 400);
-        });
+        return await contextLoader;
       },
+      path: '/',
+      element: <Main />,
       children: [
-        { path: '/', element: <ArticleSection /> },
-        { path: '/page/:page', element: <ArticleSection /> },
-        { path: 'post/:id', element: <Post /> },
+        {
+          path: '/articles?',
+          element: <ArticleSection />,
+          children: [{ path: 'page/:id', element: <ArticleSection /> }],
+        },
         {
           path: 'about',
           element: <About />,
         },
       ],
     },
+    { path: '/post/:id', element: <Post /> },
     { path: '/*', element: <Error /> },
-    { path: '/sitemap.xml', element: <div>sitemap</div> },
   ],
   { basename: '/' }
 );
