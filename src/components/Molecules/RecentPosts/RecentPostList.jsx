@@ -1,6 +1,8 @@
 import React from 'react';
 
-const RecentPosts = () => {
+const RecentPostList = () => {
+  // 세부페이지를 만들고 로컬스토리지 set 여기서 get
+
   return (
     <div>
       <h4>최근 본 포스트</h4>
@@ -11,4 +13,4 @@ const RecentPosts = () => {
   );
 };
 
-export default RecentPosts;
+export default RecentPostList;
