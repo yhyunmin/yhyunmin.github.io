@@ -29,7 +29,7 @@ function App() {
         children: [
           {
             path: '/articles?',
-            element: <ArticleSection  />,
+            element: <ArticleSection />,
             children: [{ path: 'page/:id', element: <ArticleSection /> }],
           },
           {
@@ -38,7 +38,7 @@ function App() {
           },
         ],
       },
-      { path: '/post/:id', element: <Post /> },
+      { path: '/post/:slug?', element: <Post /> },
       { path: '/*', element: <Error /> },
     ],
     { basename: '/' }

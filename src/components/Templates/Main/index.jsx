@@ -11,7 +11,7 @@ const Container = styled.main`
   justify-content: space-between;
   width: 144rem;
   height: 100vh;
-  background-color: tan;
+  /* background-color: tan; */
 `;
 const HeaderLayout = styled(Header)`
   /* css */
@@ -23,8 +23,8 @@ const HeaderLayout = styled(Header)`
 `;
 const ContentsLayout = styled.main`
   width: 92.4rem;
-  background-color: blue;
-  color: white;
+  /* background-color: blue; */
+  /* color: white; */
 `;
 
 const Template = () => {
