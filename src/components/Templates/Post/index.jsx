@@ -8,9 +8,14 @@ const Container = styled.div`
   padding-top: 40px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   width: 144rem;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: cyan;
+`;
+const SectionWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 const BannerSection = styled.aside`
   width: 21rem;
@@ -19,20 +24,29 @@ const BannerSection = styled.aside`
 const PostSection = styled.section`
   width: 116.2rem;
 `;
-const Title = styled.h1``;
+const Title = styled.h1`
+  text-align: center;
+  font-size: 4.8rem;
+  width: 100%;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #aaa;
+`;
 const Contents = styled.div``;
 const Template = ({ post }) => {
   return (
     <Container>
-      <BannerSection>
-        <Profile />
-      </BannerSection>
-      <PostSection>
-        <Contents>
-          <Title>{post && post.attributes.title}</Title>
-          <ReactMarkdown>{post && post.body}</ReactMarkdown>
-        </Contents>
-      </PostSection>
+      <Title>{post && post.attributes.title}</Title>
+      <SectionWrapper>
+        <BannerSection>
+          <Profile />
+        </BannerSection>
+        <PostSection>
+          <Contents>
+            <ReactMarkdown>{post && post.body}</ReactMarkdown>
+          </Contents>
+        </PostSection>
+      </SectionWrapper>
     </Container>
   );
 };

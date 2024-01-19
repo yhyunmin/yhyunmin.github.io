@@ -13,9 +13,11 @@ const NameBox = styled.div`
   flex-direction: column;
   p {
     color: white;
+    font-weight: 700;
   }
   span {
-    color: #a335f0;
+    color: #5022c2;
+    font-weight: 600;
   }
   a {
     display: flex;
@@ -28,9 +30,9 @@ const Profile = () => {
       <Container>
         <img src={profileImg} alt='' width={48} />
         <NameBox>
-          <p>이현민</p>
+          <p className='korfont'>이 현민</p>
           <Link target='_blank'>
-            <GithubIcon width={24} fill='#a335f0' />
+            <GithubIcon width={24} fill='#5022c2' />
             <span>yhyunmin</span>
           </Link>
         </NameBox>

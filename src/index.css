@@ -89,8 +89,8 @@ select {
 }
 
 /* 한글은 자간 음수로 */
-.kor {
-  letter-spacing: -0.2;
+.korfont {
+  letter-spacing: -0.2px !important;
 }
 
 /* 버튼 태그 초기화 */
