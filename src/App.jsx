@@ -12,7 +12,6 @@ import Post from 'src/Pages/Post';
 import ArticleSection from '@components/Organisms/ArticleSection/ArticleSection';
 import About from '@components/Organisms/About/About';
 import Error from 'src/Pages/Error';
-import contextLoader from 'src/util/contextLoader';
 import { useFrontMatterFetch } from './store/ArticleStore';
 
 function App() {
