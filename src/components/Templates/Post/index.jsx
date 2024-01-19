@@ -1,7 +1,7 @@
 import Profile from '@components/Molecules/Profile';
 import React from 'react';
 import { styled } from 'styled-components';
-
+import ReactMarkdown from 'react-markdown';
 const Container = styled.div`
   margin: 0 auto;
   padding: 0 20px;
@@ -21,15 +21,17 @@ const PostSection = styled.section`
 `;
 const Title = styled.h1``;
 const Contents = styled.div``;
-const Template = () => {
+const Template = ({ post }) => {
   return (
     <Container>
       <BannerSection>
         <Profile />
       </BannerSection>
       <PostSection>
-        <Title>POST PAGE</Title>
-        <Contents>CONTENT</Contents>
+        <Contents>
+          <Title>{post && post.attributes.title}</Title>
+          <ReactMarkdown>{post && post.body}</ReactMarkdown>
+        </Contents>
       </PostSection>
     </Container>
   );

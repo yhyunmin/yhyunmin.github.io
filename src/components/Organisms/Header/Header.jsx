@@ -13,7 +13,7 @@ const Header = ({ className }) => {
       <header className={className}>
         <Logo />
         <h2>Hyunmin Yi</h2>
-        <p>안녕하세요. 이현민 입니다. </p>
+        <p>안녕하세요.이현민 입니다. </p>
         <article>
           <ContactList />
         </article>

@@ -37,7 +37,13 @@ function App() {
           },
         ],
       },
-      { path: '/post/:slug?', element: <Post /> },
+      {
+        path: '/post/:slug?',
+        element: <Post />,
+        loader: async () => {
+          return await fetchFrontMatter();
+        },
+      },
       { path: '/*', element: <Error /> },
     ],
     { basename: '/' }
