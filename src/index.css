@@ -70,7 +70,6 @@ h4 {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* 폰트 속성 상속받기 따로 폰트설정을 할 필요 없음. */

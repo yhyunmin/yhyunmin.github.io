@@ -22,6 +22,7 @@ span {
   'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   sans-serif;
   letter-spacing: 0.01rem;
+  line-height: 1.625;
 }
 h1 {
   font-size:2.8rem;

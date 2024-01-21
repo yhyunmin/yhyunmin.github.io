@@ -27,9 +27,13 @@ function App() {
         element: <Main />,
         children: [
           {
-            path: '/articles?',
+            path: '/',
             element: <ArticleSection />,
-            children: [{ path: 'page/:id', element: <ArticleSection /> }],
+          },
+          {
+            path: '/articles',
+            element: <ArticleSection />,
+            children: [{ path: 'page/:page', element: <ArticleSection /> }],
           },
           {
             path: 'about',

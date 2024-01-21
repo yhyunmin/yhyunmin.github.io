@@ -28,7 +28,7 @@ const Profile = () => {
   return (
     <>
       <Container>
-        <img src={profileImg} alt='' width={48} />
+        <img src={profileImg} alt='이현민 블로그' width={48} />
         <NameBox>
           <p className='korfont'>이 현민</p>
           <Link target='_blank'>
