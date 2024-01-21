@@ -59,8 +59,12 @@ const ArticleSection = ({ className }) => {
     if (page > 1) {
       navigate(`/articles/page/${page}`);
     }
+    if (page > totalPages) {
+      setCurrentPage(1);
+      navigate(`/articles/page/1`);
+    }
     console.log(page);
-  }, [page, navigate]);
+  }, [page, navigate, totalPages]);
 
   return (
     <main className={className}>
