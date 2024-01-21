@@ -55,14 +55,14 @@ const ArticleSection = ({ className }) => {
   useEffect(() => {
     if (!page) {
       setCurrentPage(1);
-    }
-    if (page > 1) {
-      navigate(`/articles/page/${page}`);
+      return;
     }
     if (page > totalPages) {
       setCurrentPage(1);
       navigate(`/articles/page/1`);
+      return;
     }
+    navigate(`/articles/page/${page}`);
     console.log(page);
   }, [page, navigate, totalPages]);
 
