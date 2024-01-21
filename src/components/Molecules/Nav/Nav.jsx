@@ -17,7 +17,7 @@ const Nav = () => {
     <Container>
       <Ul>
         <Li>
-          <Link to='/articles/page/1'>Articles</Link>
+          <Link to='/articles?page=1'>Articles</Link>
         </Li>
         <Li>
           <Link to='/about'>About Me</Link>

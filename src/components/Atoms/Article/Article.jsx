@@ -78,7 +78,7 @@ const Article = ({ attributes = {}, onClick }) => {
           <Subtitle>{attributes.description} </Subtitle>
           <ReadMore onClick={() => onClick()}>
             Read More
-            <ArrowRightIcon width={16} fill='#5022c2' />
+            <ArrowRightIcon width={16} height={16} fill='#5022c2' />
           </ReadMore>
         </>
       )}

@@ -33,7 +33,7 @@ function App() {
           {
             path: '/articles',
             element: <ArticleSection />,
-            children: [{ path: 'page/:page', element: <ArticleSection /> }],
+            // children: [{ path: 'page/:page', element: <ArticleSection /> }],
           },
           {
             path: 'about',
@@ -42,7 +42,7 @@ function App() {
         ],
       },
       {
-        path: '/post/:slug?',
+        path: '/articles/:slug?',
         element: <Post />,
         loader: async () => {
           return await fetchFrontMatter();

@@ -1,7 +1,7 @@
 import ArticleList from '@components/Molecules/ArticleList/ArticleList';
 import { useFrontMatter, useFrontMatterFetch } from 'src/store/ArticleStore';
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 const ButtonBox = styled.div`
@@ -22,7 +22,9 @@ const ButtonBox = styled.div`
 //  처음 page는 1, next 누르면 current page가 2가되고 /page/2 가되기에 params 도 2가됨.
 // currentPage는 page를 가져와서 2가되니 => 계산 후 아티클 리스트 다음 내역보여줌
 const ArticleSection = ({ className }) => {
-  const { page } = useParams();
+  // const { page } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = searchParams.get('page');
   const [currentPage, setCurrentPage] = useState(parseInt(page));
   const [currentItems, setCurrentItems] = useState([]);
   const navigate = useNavigate();
