@@ -7,7 +7,7 @@ const ArticleList = ({ frontMatterDatas }) => {
   const setPostData = usePostAction();
   const handleClick = attributes => {
     setPostData(attributes);
-    navigate(`/post/${attributes.slug}`);
+    navigate(`/articles/${attributes.slug}`);
   };
 
   return (

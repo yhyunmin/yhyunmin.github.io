@@ -34,6 +34,7 @@ const Title = styled.h1`
 `;
 const Contents = styled.div``;
 const Template = ({ post }) => {
+  console.log(post);
   return (
     <Container>
       <Title>{post && post.attributes.title}</Title>

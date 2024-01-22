@@ -65,7 +65,6 @@ const ArticleSection = ({ className }) => {
       return;
     }
     navigate(`/articles?page=${page}`);
-    console.log(page);
   }, [page, navigate, totalPages]);
 
   return (

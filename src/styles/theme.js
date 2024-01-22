@@ -1,7 +1,7 @@
-export const lightTheme = {
+export const light = {
   bgc: '#fff',
 };
 
-export const darkTheme = {
+export const dark = {
   bgc: '#333',
 };
