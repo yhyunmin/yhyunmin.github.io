@@ -33,7 +33,7 @@ const DarkTheme = memo(({ ...props }) => {
         width={24}
         height={24}
         fill={theme ? 'orange' : '#ffd285'}
-        transform={theme ? ' translate(0,0)' : 'translate(30,5)'}
+        transform={theme ? ' translate(0,0)' : 'translate(-30,0)'}
         opacity={theme ? 1 : 0}
       />
       <span
