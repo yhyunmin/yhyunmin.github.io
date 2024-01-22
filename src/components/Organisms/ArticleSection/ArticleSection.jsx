@@ -37,14 +37,14 @@ const ArticleSection = ({ className }) => {
       return null;
     }
     setCurrentPage(prev => prev + 1);
-    navigate(`/articles/page/${currentPage + 1}`);
+    navigate(`/articles?page=${currentPage + 1}`);
   };
   const handlePrevPage = () => {
     if (!(currentPage > 1)) {
       return null;
     }
     setCurrentPage(prev => prev - 1);
-    navigate(`/articles/page/${currentPage - 1}`);
+    navigate(`/articles?page=${currentPage - 1}`);
   };
 
   useEffect(() => {
@@ -61,10 +61,10 @@ const ArticleSection = ({ className }) => {
     }
     if (page > totalPages) {
       setCurrentPage(1);
-      navigate(`/articles/page/1`);
+      navigate('/articles?page=1');
       return;
     }
-    navigate(`/articles/page/${page}`);
+    navigate(`/articles?page=${page}`);
     console.log(page);
   }, [page, navigate, totalPages]);
 
