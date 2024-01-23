@@ -3,6 +3,10 @@ import { font } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
 ${font}
+* {
+  transition: color 0.2s linear, background-color 0.2s linear;
+
+}
 /* rem px 1:1 대응 */
 html {
   font-size: 62.5%;
@@ -64,6 +68,9 @@ code {
   font-size: 0.1px;
 }
 
+.subTitle {
+  opacity: 0.8;
+}
 /* 다크모드 반응 코드 */
 body {
   background-color: ${({ theme }) => theme.bgc};

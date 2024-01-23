@@ -72,7 +72,7 @@ const Article = ({ attributes = {}, onClick }) => {
             <Tag className='tag'>{attributes.tags}</Tag>
           </div>
           <Title onClick={() => onClick()}>{attributes.title}</Title>
-          <Subtitle>{attributes.description} </Subtitle>
+          <Subtitle className='subTitle'>{attributes.description} </Subtitle>
           <ReadMore onClick={() => onClick()}>
             Read More
             <ArrowRightIcon className='primary' width={16} height={16} />

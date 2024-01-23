@@ -14,7 +14,7 @@ const ColorGuide = () => {
       }>
       <p>Pretendard {color.iconColor}</p>
       <h1>HEADING {color.heading}</h1>
-      <p>SUBTITLE {color.subtitle}</p>
+      <p className='subTitle'>SUBTITLE {color.subtitle}</p>
       <p style={{ color: color.primary }}>Primary {color.primary}</p>
       <div style={{ backgroundColor: color.primary }}></div>
     </aside>

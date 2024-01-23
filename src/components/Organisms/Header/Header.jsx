@@ -25,10 +25,17 @@ const HeaderBox = styled.header`
     gap: 0.12rem;
     margin-right: 2rem;
     border-radius: 8px;
-    padding: 1.2rem;
+    padding: 1.2rem 0;
+    font-weight: 600;
     div {
       width: 21rem;
       height: 4rem;
+    }
+    p {
+      font-size: 1.4rem !important;
+    }
+    h1 {
+      font-size: 2.6rem;
     }
   }
 `;
@@ -51,7 +58,9 @@ const Header = ({ className }) => {
         <div>
           <DarkTheme onClick={toggleTheme} />
           <ColorGuide />
-          <p>© 2022. Hyunmin Yi. All rights reserved.</p>
+          <p style={{ opacity: 0.5, fontSize: '1.4rem' }}>
+            © 2022. Hyunmin Yi. All rights reserved.
+          </p>
         </div>
       </HeaderBox>
     </>
