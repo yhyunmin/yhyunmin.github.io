@@ -5,26 +5,21 @@ import { Outlet } from 'react-router-dom';
 
 const Container = styled.main`
   margin: 0 auto;
-  padding: 0 20px;
-  padding-top: 40px;
+  padding: 40px 20px;
+  padding-bottom: 140px;
   display: flex;
   justify-content: space-between;
   width: 144rem;
   height: 100vh;
-  /* background-color: tan; */
 `;
 const HeaderLayout = styled(Header)`
   /* css */
   width: 32.9rem;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
-  gap: 16px;
 `;
 const ContentsLayout = styled.main`
   width: 92.4rem;
-  /* background-color: blue; */
-  /* color: white; */
 `;
 
 const Template = () => {

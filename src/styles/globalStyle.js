@@ -21,7 +21,7 @@ span {
   'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
   'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   sans-serif;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.032rem;
   line-height: 1.625;
 }
 h1 {
@@ -44,11 +44,17 @@ p {
 button {
   font-size: 1.4rem;
 }
-/* 다크모드 반응 코드 */
-body {
-  background-color: ${({ theme }) => theme.bgc};
-}
 
+pre {
+  margin: 2rem 0;
+  padding: 4rem;
+  border-radius: 12px;
+}
+code {
+  font-size: 1.6rem;
+  font-family: D2coding;
+
+}
 /* 태그의 텍스트 없애기  */
 .hidingTexts {
   text-indent:100%;
@@ -57,6 +63,47 @@ body {
   user-select: none;
   font-size: 0.1px;
 }
-`;
 
+/* 다크모드 반응 코드 */
+body {
+  background-color: ${({ theme }) => theme.bgc};
+}
+h1 {
+  color: ${({ theme }) => theme.heading};
+}
+h2 {
+  color: ${({ theme }) => theme.heading};
+}
+p {
+  color: ${({ theme }) => theme.subtitle};
+}
+a {
+  color: ${({ theme }) => theme.primary};
+}
+button { 
+  background-color: ${({ theme }) => theme.elavateColor};
+  color: ${({ theme }) => theme.heading};
+}
+pre {
+  background-color: ${({ theme }) => theme.elavateColor};
+}
+code {
+  background-color: ${({ theme }) => theme.elavateColor};
+}
+time {
+color : ${({ theme }) => theme.subtitle};
+}
+span {
+  color: ${({ theme }) => theme.subtitle};
+}
+.borderColor {
+  border-color: ${({ theme }) => theme.borderColor} !important;
+}
+a.navColor {
+  color: ${({ theme }) => theme.heading};
+}
+svg.primary {
+  fill: ${({ theme }) => theme.primary};
+}
+`;
 export default GlobalStyle;

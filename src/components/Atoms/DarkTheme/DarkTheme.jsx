@@ -12,6 +12,7 @@ const Button = styled.button`
   overflow: hidden;
   border-radius: 50%;
   height: min-content;
+  padding: 0.4rem;
   & > svg {
     top: 0;
     left: 0;
@@ -38,9 +39,9 @@ const DarkTheme = memo(({ ...props }) => {
       />
       <span
         style={{
-          transform: theme ? 'translate(26px, 4px)' : 'translate(4px, -4px)',
+          transform: theme ? 'translate(26px, 4px)' : 'translate(9px, 2px)',
         }}>
-        <MoonIcon width={24} height={24} fill={theme ? '#fff' : '#333'} />
+        <MoonIcon width={24} height={24} fill={theme ? '#fff' : '#282828'} />
       </span>
     </Button>
   );

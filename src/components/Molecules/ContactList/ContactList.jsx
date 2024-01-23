@@ -12,6 +12,7 @@ const ContactsList = () => {
   const MyContact = myContactList.map(contact => (
     <ContactIcon
       key={contact.id}
+      alt={contact.title}
       href={contact.href}
       icon={contact.icon}
       width={24}

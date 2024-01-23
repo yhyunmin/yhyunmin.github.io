@@ -2,8 +2,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 const StyledTag = styled.button`
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 0.1rem solid #eee;
   border-radius: 5px;
   padding: 4px 8px;
   opacity: 0.9;
@@ -17,7 +16,7 @@ const StyledTag = styled.button`
 const Tag = ({ title, count }) => {
   return (
     <li>
-      <StyledTag>
+      <StyledTag className='borderColor'>
         {title} <span>({count})</span>
       </StyledTag>
     </li>

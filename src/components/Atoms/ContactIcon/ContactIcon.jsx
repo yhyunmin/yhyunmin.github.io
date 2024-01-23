@@ -6,9 +6,7 @@ const Icon = styled.li`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  &:hover {
-    background-color: #0001;
-  }
+
   a {
     display: flex;
     justify-content: center;
@@ -20,7 +18,7 @@ const ContactIcon = ({ href, icon, ...props }) => {
   return (
     <Icon>
       <Link to={href} target='_blank'>
-        <img src={icon} alt='' {...props} />
+        <img src={icon} {...props} />
       </Link>
     </Icon>
   );

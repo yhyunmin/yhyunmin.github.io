@@ -51,7 +51,7 @@ export const font = css`
     font-weight: normal;
     /* 폰트최적화를위한 swap */
     font-display: swap;
-    src: local('D2coding') url(${D2Coding}) format('woff2');
+    src: local('D2Coding') url(${D2Coding}) format('woff2');
   }
   @font-face {
     font-family: 'Hans Calli';

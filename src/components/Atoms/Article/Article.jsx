@@ -20,7 +20,6 @@ const Divider = styled.span`
   margin: 0 0.675rem;
 `;
 const Tag = styled.span`
-  color: #5022c2;
   font-weight: 600;
 `;
 const Title = styled.h2`
@@ -29,8 +28,6 @@ const Title = styled.h2`
   font-size: 2.8rem;
   cursor: pointer;
   font-weight: 700;
-  opacity: 0.9;
-
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -44,9 +41,9 @@ const Subtitle = styled.p`
 const ReadMore = styled.a`
   display: flex;
   align-items: center;
-  color: #5022c2;
   cursor: pointer;
   font-size: 1.6rem;
+  font-weight: 600;
   opacity: 0.9;
   z-index: 2;
   svg {
@@ -66,7 +63,7 @@ const ReadMore = styled.a`
 
 const Article = ({ attributes = {}, onClick }) => {
   return (
-    <Container>
+    <Container className='borderColor'>
       {attributes && (
         <>
           <div>
@@ -78,7 +75,7 @@ const Article = ({ attributes = {}, onClick }) => {
           <Subtitle>{attributes.description} </Subtitle>
           <ReadMore onClick={() => onClick()}>
             Read More
-            <ArrowRightIcon width={16} height={16} fill='#5022c2' />
+            <ArrowRightIcon className='primary' width={16} height={16} />
           </ReadMore>
         </>
       )}

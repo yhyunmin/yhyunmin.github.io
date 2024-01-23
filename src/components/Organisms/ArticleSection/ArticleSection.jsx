@@ -12,10 +12,9 @@ const ButtonBox = styled.div`
   button {
     font-size: 1.6rem;
     font-weight: 600;
-    opacity: 0.7;
+    background-color: transparent;
     &:hover {
       color: #5022c2;
-      opacity: 1;
     }
   }
 `;
