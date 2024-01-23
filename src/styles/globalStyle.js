@@ -105,5 +105,8 @@ a.navColor {
 svg.primary {
   fill: ${({ theme }) => theme.primary};
 }
+svg.headingColor {
+  fill: ${({ theme }) => theme.heading};
+}
 `;
 export default GlobalStyle;
