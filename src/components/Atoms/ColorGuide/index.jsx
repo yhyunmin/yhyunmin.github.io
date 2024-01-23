@@ -6,10 +6,12 @@ const ColorGuide = () => {
   const color = theme === light ? light : dark;
   return (
     <aside
-      style={{
-        backgroundColor: color.elavateColor,
-        border: `1px solid ${color.borderColor}`,
-      }}>
+      style={
+        {
+          // backgroundColor: color.elavateColor,
+          // border: `1px solid ${color.borderColor}`,
+        }
+      }>
       <p>Pretendard {color.iconColor}</p>
       <h1>HEADING {color.heading}</h1>
       <p>SUBTITLE {color.subtitle}</p>
