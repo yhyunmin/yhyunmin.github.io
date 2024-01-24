@@ -6,7 +6,7 @@
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   cursor: default;
-  line-height: 1.5;
+  line-height: 1.625;
   overflow-wrap: break-word;
   -moz-tab-size: 4;
   tab-size: 4;
@@ -28,10 +28,11 @@ html {
 }
 
 /* list기본 스타일 제거 */
-ul,
+/* ul,
 ol {
   list-style: none;
-}
+} */
+
 /* 접근성 생각하면 밑에 role 사용 */
 /* 
 ul[role='list'],

@@ -17,6 +17,11 @@ const HeaderLayout = styled(Header)`
   width: 32.9rem;
   display: flex;
   flex-direction: column;
+
+  ol,
+  ul {
+    list-style: none;
+  }
 `;
 const ContentsLayout = styled.main`
   width: 92.4rem;

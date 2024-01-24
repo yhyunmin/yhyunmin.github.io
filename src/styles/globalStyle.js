@@ -85,6 +85,15 @@ h2 {
 h3 {
   color: ${({ theme }) => theme.subtitle};
 }
+h4 {
+  color: ${({ theme }) => theme.subtitle};
+}
+h5 {
+  color: ${({ theme }) => theme.subtitle};
+}
+h6 {
+  color: ${({ theme }) => theme.subtitle};
+}
 p {
   color: ${({ theme }) => theme.subtitle};
 }
