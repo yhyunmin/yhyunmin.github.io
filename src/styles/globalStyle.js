@@ -4,7 +4,7 @@ import { font } from './fonts';
 const GlobalStyle = createGlobalStyle`
 ${font}
 * {
-  transition: color 0.2s linear, background-color 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, fill 0.2s linear;
 
 }
 /* rem px 1:1 대응 */
@@ -81,8 +81,16 @@ h1 {
 h2 {
   color: ${({ theme }) => theme.heading};
 }
+
+h3 {
+  color: ${({ theme }) => theme.subtitle};
+}
 p {
   color: ${({ theme }) => theme.subtitle};
+}
+li {
+  color: ${({ theme }) => theme.subtitle};
+
 }
 a {
   color: ${({ theme }) => theme.primary};
@@ -96,6 +104,7 @@ pre {
 }
 code {
   background-color: ${({ theme }) => theme.elavateColor};
+  color : ${({ theme }) => theme.subtitle};
 }
 time {
 color : ${({ theme }) => theme.subtitle};
@@ -109,8 +118,9 @@ span {
 a.navColor {
   color: ${({ theme }) => theme.heading};
 }
-svg.primary {
+.primary {
   fill: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
 }
 svg.headingColor {
   fill: ${({ theme }) => theme.heading};
