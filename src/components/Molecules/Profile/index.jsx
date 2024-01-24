@@ -30,7 +30,7 @@ const Profile = () => {
         <NameBox>
           <p className='korfont'>이 현민</p>
           <Link target='_blank' to='https://github.com/yhyunmin'>
-            <GithubIcon width={24} className='primary' />
+            <GithubIcon width={24} height={24} className='primary' />
             <span className='primary'>yhyunmin</span>
           </Link>
         </NameBox>

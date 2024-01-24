@@ -12,6 +12,7 @@ html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -49,6 +50,7 @@ button {
   font-size: 1.4rem;
 }
 
+/* markdown style */
 pre {
   margin: 2rem 0;
   padding: 4rem;
@@ -57,8 +59,24 @@ pre {
 code {
   font-size: 1.6rem;
   font-family: D2coding;
-
 }
+blockquote {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 4rem;
+  font-weight: 600;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 0.4rem;
+    height: 100%;
+    background-color:  ${({ theme }) => theme.primary};
+  }
+  
+}
+
 /* 태그의 텍스트 없애기  */
 .hidingTexts {
   text-indent:100%;
@@ -114,6 +132,11 @@ pre {
 code {
   background-color: ${({ theme }) => theme.elavateColor};
   color : ${({ theme }) => theme.subtitle};
+}
+blockquote {
+  background-color: ${({ theme }) => theme.elavateColor};
+  color : ${({ theme }) => theme.subtitle};
+  
 }
 time {
 color : ${({ theme }) => theme.subtitle};
