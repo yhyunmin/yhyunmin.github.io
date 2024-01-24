@@ -17,3 +17,15 @@ export const dark = {
   iconColor: '#D8D8D8',
   elavateColor: '#282828',
 };
+
+const size = {
+  mobile: '500px',
+  tablet: '1280px',
+  pc: '1440px',
+};
+
+export const responsive = {
+  mobile: `(max-width: ${size.mobile})`,
+  tablet: `(max-width: ${size.tablet})`,
+  pc: `(min-width: ${size.pc})`,
+};
