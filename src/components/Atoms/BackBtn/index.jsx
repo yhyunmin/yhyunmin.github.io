@@ -10,6 +10,7 @@ const Btn = styled.button`
   font-weight: 600;
   order: 3;
   color: ${({ theme }) => theme.primary};
+  margin-left: 1.2rem;
   svg {
     fill: ${({ theme }) => theme.primary};
     transform: translateX(50%);

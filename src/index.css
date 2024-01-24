@@ -32,6 +32,10 @@ html {
 ol {
   list-style: none;
 } */
+/* ul,
+ol {
+  list-style-position: inside;
+} */
 
 /* 접근성 생각하면 밑에 role 사용 */
 /* 
@@ -103,4 +107,8 @@ button {
 /* a 태그 밑줄 삭제 */
 a {
   text-decoration: none;
+}
+
+li {
+  margin-left: 1em;
 }

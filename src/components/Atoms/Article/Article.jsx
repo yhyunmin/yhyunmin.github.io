@@ -4,6 +4,7 @@ import convertDate from '@libs/convertDate';
 import { ReactComponent as ArrowRightIcon } from '@img/mdi_arrow_right.svg';
 
 const Container = styled.article`
+  position: relative;
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -11,6 +12,19 @@ const Container = styled.article`
   width: 100%;
   border-bottom: 1px solid #eee;
   padding-bottom: 2rem;
+  &::after {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: -2rem;
+    content: '';
+    width: 0.4rem;
+    height: 2.4rem;
+    background-color: ${props => props.theme.primary};
+  }
+  &:hover::after {
+    display: block;
+  }
 `;
 const Dates = styled.time`
   font-weight: 600;
