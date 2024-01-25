@@ -33,7 +33,8 @@ const HeaderBox = styled.header`
     }
     p {
       font-size: 1.4rem !important;
-    }
+    }import { Link } from 'react-router-dom';
+
     h1 {
       font-size: 2.6rem;
     }
@@ -55,6 +56,11 @@ const Header = ({ className }) => {
           <Nav />
           <TagList />
         </div>
+        <div>
+          <p>최근 본 포스트</p>
+          <Link to='/'>test</Link>
+        </div>
+
         <div>
           <DarkTheme onClick={toggleTheme} />
           <ColorGuide />
