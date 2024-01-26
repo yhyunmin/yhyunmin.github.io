@@ -7,7 +7,7 @@ import TagList from '@components/Molecules/TagList/TagList';
 import { styled } from 'styled-components';
 import { useThemeAction } from 'src/store/ThemeStore';
 import ColorGuide from '@components/Atoms/ColorGuide';
-
+import { Link } from 'react-router-dom';
 const HeaderBox = styled.header`
   height: 100%;
   border-right: 0.1rem solid #eee;
@@ -33,7 +33,7 @@ const HeaderBox = styled.header`
     }
     p {
       font-size: 1.4rem !important;
-    }import { Link } from 'react-router-dom';
+    }
 
     h1 {
       font-size: 2.6rem;

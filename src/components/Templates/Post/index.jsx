@@ -78,7 +78,11 @@ const BookmarkNav = styled.ul`
   }
 `;
 
-const Contents = styled.div``;
+const Contents = styled.div`
+  ol li {
+    margin-left: 1em;
+  }
+`;
 const Template = ({ post, summary }) => {
   const toggleTheme = useThemeAction();
   const navigate = useNavigate();

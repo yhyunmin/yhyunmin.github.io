@@ -5,9 +5,18 @@ import { usePostAction } from 'src/store/PostStore';
 const ArticleList = ({ frontMatterDatas }) => {
   const navigate = useNavigate();
   const setPostData = usePostAction();
+
   const handleClick = attributes => {
     setPostData(attributes);
     navigate(`/articles/${attributes.slug}`);
+
+    if (localStorage.getItem(`${attributes.title}`)) {
+      return;
+    }
+    localStorage.setItem(
+      `${attributes.title}`,
+      JSON.stringify(attributes.slug)
+    );
   };
 
   return (
