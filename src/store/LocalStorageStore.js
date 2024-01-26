@@ -4,18 +4,19 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 const useLocalStorageStore = create(
   persist(
     (set, get) => ({
-      localStorage: [],
+      localStorageList: [],
       action: {
         setLocalStorage: data => {
-          set({ recentPost: data });
+          set({ ...data, localStorageList: data });
         },
+        getLocalStorage: () => get().localStorageList,
       },
     }),
-    { name: 'recentPost', storage: createJSONStorage(() => localStorage) }
+    { name: 'recentPost' }
   )
 );
 
 export const useRecentPostStore = () =>
-  useLocalStorageStore(state => state.recentPost);
+  useLocalStorageStore(state => state.localStorageList);
 export const useRecentPostAction = () =>
-  useLocalStorageStore(state => state.action.setLocalStorage);
+  useLocalStorageStore(state => state.action);
