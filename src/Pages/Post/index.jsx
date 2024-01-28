@@ -12,6 +12,17 @@ const Post = () => {
   const findPost = fmData.find(data => data.attributes.slug === slug);
   const getSummary = findPost.body.match(/^#{3}[^#].*$/gm);
 
+  const observer = new IntersectionObserver(e => {
+    e.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.fontWeight = '700';
+      } else {
+        entry.target.style.fontWeight = '400';
+      }
+    });
+  });
+  observer.observe();
+
   useEffect(() => {
     console.log(getSummary);
   }, []);

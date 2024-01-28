@@ -60,8 +60,8 @@ const SideBar = styled.div`
 `;
 const BookmarkNav = styled.ul`
   margin: 2rem;
-  border: 1px solid #aaa;
-  border-color: ${({ theme }) => theme.borderColor};
+  /* border: 1px solid #aaa; */
+  /* border-color: ${({ theme }) => theme.borderColor}; */
   background-color: ${({ theme }) => theme.elavateColor};
   border-radius: 8px;
   padding: 1.2rem 2.4rem;
@@ -69,7 +69,7 @@ const BookmarkNav = styled.ul`
     list-style: none;
     margin: 0.4rem;
     a {
-      color: ${({ theme }) => theme.subTitle};
+      color: ${({ theme }) => theme.subtitle};
     }
     &:hover a {
       border-bottom: 1px solid #aaa;
