@@ -10,11 +10,12 @@ const ArticleList = ({ frontMatterDatas }) => {
 
   const handleClick = attributes => {
     setPostData(attributes);
+    navigate(`/articles/${attributes.slug}`);
     setLocalStorage({
+      id: attributes.date,
       slug: attributes.slug,
       title: attributes.title,
     });
-    navigate(`/articles/${attributes.slug}`);
   };
 
   return (

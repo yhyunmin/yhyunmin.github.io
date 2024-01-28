@@ -13,7 +13,7 @@ const RecentPostList = ({ localStorage }) => {
       <h4>최근 본 포스트</h4>
       {localStorage &&
         localStorage.map(post => {
-          return <RecentPost key={`recent-post-${post}`} post={post} />;
+          return <RecentPost key={`${post.id}-${post.title}`} post={post} />;
         })}
     </Container>
   );

@@ -7,11 +7,20 @@ const useLocalStorageStore = create(
       localStorageList: [],
       setLocalStorage: data => {
         const { getLocalStorage } = get();
+        //if data is same in getLocalStorage, return null
+        if (
+          getLocalStorage().find(
+            item => item.id === data.id && item.slug === data.slug
+          )
+        ) {
+          getLocalStorage().forEach((item, index) => {
+            if (item.id === data.id && item.slug === data.slug) {
+              getLocalStorage().splice(index, 1);
+            }
+          });
+        }
         if (getLocalStorage().length >= 5) {
           getLocalStorage().shift();
-        }
-        if (getLocalStorage().includes(data)) {
-          return null;
         }
         set(state => ({
           ...state,

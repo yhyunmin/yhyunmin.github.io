@@ -86,10 +86,12 @@ const Contents = styled.div`
 const Template = ({ post, summary }) => {
   const toggleTheme = useThemeAction();
   const navigate = useNavigate();
-  console.log(post);
   const [contents, setContents] = useState([]);
 
   useEffect(() => {
+    if (!summary) {
+      return;
+    }
     // Use map instead of forEach to create an array of slugs
     const newSlugs = summary.map(element =>
       generateSlug(element).replace(/^-/, '')
@@ -97,7 +99,6 @@ const Template = ({ post, summary }) => {
 
     // Update the state with the array of slugs
     setContents(newSlugs);
-    console.log(newSlugs);
   }, [summary]);
 
   const MarkdownComponents = useMemo(() => {
@@ -145,7 +146,7 @@ const Template = ({ post, summary }) => {
             <BookmarkNav>
               {contents &&
                 contents.map((heading3Title, index) => (
-                  <li>
+                  <li key={index}>
                     <a href={`#${heading3Title}`} key={index}>
                       {heading3Title}
                     </a>
