@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const RecentPost = () => {
+const RecentPost = ({ post, className }) => {
   return (
-    <div>RecentPost</div>
-  )
-}
+    <Link to={`/articles/${post.slug}`} className={className}>
+      {post.title}
+    </Link>
+  );
+};
 
-export default RecentPost
+export default RecentPost;

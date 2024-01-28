@@ -8,6 +8,8 @@ import { styled } from 'styled-components';
 import { useThemeAction } from 'src/store/ThemeStore';
 import ColorGuide from '@components/Atoms/ColorGuide';
 import { Link } from 'react-router-dom';
+import RecentPostList from '@components/Molecules/RecentPostList';
+import { useLocalStorage } from 'src/store/LocalStorageStore';
 const HeaderBox = styled.header`
   height: 100%;
   border-right: 0.1rem solid #eee;
@@ -42,6 +44,7 @@ const HeaderBox = styled.header`
 `;
 const Header = ({ className }) => {
   const toggleTheme = useThemeAction();
+  const localStorage = useLocalStorage();
 
   return (
     <>
@@ -57,8 +60,7 @@ const Header = ({ className }) => {
           <TagList />
         </div>
         <div>
-          <p>최근 본 포스트</p>
-          <Link to='/'>test</Link>
+          <RecentPostList localStorage={localStorage} />
         </div>
 
         <div>

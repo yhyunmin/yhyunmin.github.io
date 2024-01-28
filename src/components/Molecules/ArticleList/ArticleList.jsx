@@ -2,21 +2,19 @@ import React, { useEffect } from 'react';
 import Article from '@components/Atoms/Article/Article';
 import { useNavigate } from 'react-router-dom';
 import { usePostAction } from 'src/store/PostStore';
+import { useSetLocalStorage } from 'src/store/LocalStorageStore';
 const ArticleList = ({ frontMatterDatas }) => {
   const navigate = useNavigate();
   const setPostData = usePostAction();
+  const setLocalStorage = useSetLocalStorage();
 
   const handleClick = attributes => {
     setPostData(attributes);
+    setLocalStorage({
+      slug: attributes.slug,
+      title: attributes.title,
+    });
     navigate(`/articles/${attributes.slug}`);
-
-    if (localStorage.getItem(`${attributes.title}`)) {
-      return;
-    }
-    localStorage.setItem(
-      `${attributes.title}`,
-      JSON.stringify(attributes.slug)
-    );
   };
 
   return (
