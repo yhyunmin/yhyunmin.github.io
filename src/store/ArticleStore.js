@@ -14,7 +14,8 @@ const useFrontMatterStore = create((set, get) => ({
       const tagsArray = [];
       const countObject = {};
       get().frontMatterDatas.forEach(data => {
-        tagsArray.push(data.attributes.tags);
+        const tag = data.attributes.tags.toLowerCase();
+        tagsArray.push(tag);
       });
       tagsArray.forEach(tag => {
         countObject[tag] = (countObject[tag] || 0) + 1;

@@ -6,11 +6,14 @@ const StyledTag = styled.button`
   border-radius: 5px;
   padding: 4px 8px;
   opacity: 0.9;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 400;
   &:hover {
     opacity: 1;
   }
   span {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 `;
 const Tag = ({ title, count }) => {
