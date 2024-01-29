@@ -26,6 +26,5 @@ const size = {
 
 export const responsive = {
   mobile: `(max-width: ${size.mobile})`,
-  tablet: `(max-width: ${size.tablet})`,
   pc: `(min-width: ${size.pc})`,
 };

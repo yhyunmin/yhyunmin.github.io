@@ -90,6 +90,7 @@ blockquote {
   opacity: 0.8;
 }
 /* 다크모드 반응 코드 */
+/* css 변수로 리팩토링   */
 body {
   background-color: ${({ theme }) => theme.bgc};
 }

@@ -45,7 +45,6 @@ const HeaderBox = styled.header`
 const Header = ({ className }) => {
   const toggleTheme = useThemeAction();
   const localStorage = useLocalStorage();
-  console.log(localStorage);
 
   return (
     <>
