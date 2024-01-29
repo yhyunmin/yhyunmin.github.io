@@ -12,19 +12,27 @@ import ArticleSection from '@components/Organisms/ArticleSection/ArticleSection'
 import About from '@components/Organisms/About/About';
 import Error from 'src/Pages/Error';
 import { useFrontMatterFetch } from './store/ArticleStore';
-import { useTheme } from './store/ThemeStore';
-import { useState } from 'react';
+import { useSetThemeAction, useTheme } from './store/ThemeStore';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [memo, setMemo] = useState(null);
   const theme = useTheme();
   const fetchFrontMatter = useFrontMatterFetch();
-
+  const setTheme = useSetThemeAction();
   const memoFrontMatter = async () => {
     const result = await fetchFrontMatter();
     setMemo(result);
     return result;
   };
+
+  useEffect(() => {
+    const hasTheme = localStorage.getItem('theme');
+    if (hasTheme === undefined) {
+      localStorage.setItem('theme', 'true');
+      return setTheme(true);
+    }
+  }, []);
 
   const router = createBrowserRouter(
     [
@@ -42,7 +50,6 @@ function App() {
           {
             path: '/articles',
             element: <ArticleSection />,
-            // children: [{ path: 'page/:page', element: <ArticleSection /> }],
           },
           {
             path: 'about',

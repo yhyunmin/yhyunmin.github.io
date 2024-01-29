@@ -7,6 +7,7 @@ import { useTagListAction } from 'src/store/ArticleStore';
 const Main = () => {
   const setTagList = useTagListAction();
 
+
   useEffect(() => {
     setTagList();
   }, []);
