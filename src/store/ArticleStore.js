@@ -4,10 +4,29 @@ import fm from 'front-matter';
 const useFrontMatterStore = create((set, get) => ({
   //store
   frontMatterDatas: [],
+  tagList: [],
   //action
   action: {
     setFrontMatterDatas: data => {
       set({ frontMatterDatas: data });
+    },
+    setTagList: () => {
+      const tagsArray = [];
+      const countObject = {};
+      get().frontMatterDatas.forEach(data => {
+        tagsArray.push(data.attributes.tags);
+      });
+      tagsArray.forEach(tag => {
+        countObject[tag] = (countObject[tag] || 0) + 1;
+      });
+      const sortedTags = Object.entries(countObject)
+        .map(([tag, count], index) => ({
+          id: index + 1,
+          tag: tag,
+          count: count,
+        }))
+        .sort((a, b) => b.count - a.count);
+      set({ tagList: sortedTags });
     },
   },
   //fetch
@@ -37,3 +56,7 @@ export const useFrontMatterAction = () =>
   useFrontMatterStore(state => state.action.setFrontMatterDatas);
 export const useFrontMatterFetch = () =>
   useFrontMatterStore(state => state.fetch.fetchMdFmData);
+
+export const useTagList = () => useFrontMatterStore(state => state.tagList);
+export const useTagListAction = () =>
+  useFrontMatterStore(state => state.action.setTagList);
