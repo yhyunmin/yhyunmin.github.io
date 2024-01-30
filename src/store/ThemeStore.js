@@ -5,10 +5,9 @@ const useThemeStore = create(set => ({
   //store
   theme: true,
   action: {
-    toggleTheme: () =>
-      set(state => {
-        !state.theme;
-      }),
+    toggleTheme: () => {
+      set(state => ({ ...state, theme: !state.theme }));
+    },
   },
 }));
 export const useTheme = () => {
