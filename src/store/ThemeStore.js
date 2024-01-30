@@ -7,16 +7,8 @@ const useThemeStore = create(set => ({
   action: {
     toggleTheme: () =>
       set(state => {
-        const newTheme = !state.theme;
-        localStorage.setItem('theme', newTheme);
-        return {
-          theme: newTheme,
-        };
+        !state.theme;
       }),
-    setTheme: (theme = true) =>
-      set(() => ({
-        theme: theme,
-      })),
   },
 }));
 export const useTheme = () => {
@@ -24,7 +16,4 @@ export const useTheme = () => {
 };
 export const useThemeAction = () => {
   return useThemeStore(state => state.action.toggleTheme);
-};
-export const useSetThemeAction = () => {
-  return useThemeStore(state => state.action.setTheme);
 };

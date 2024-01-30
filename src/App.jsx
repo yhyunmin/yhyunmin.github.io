@@ -12,27 +12,19 @@ import ArticleSection from '@components/Organisms/ArticleSection/ArticleSection'
 import About from '@components/Organisms/About/About';
 import Error from 'src/Pages/Error';
 import { useFrontMatterFetch } from './store/ArticleStore';
-import { useSetThemeAction, useTheme } from './store/ThemeStore';
-import { useEffect, useState } from 'react';
+import { useTheme } from './store/ThemeStore';
+import { useState } from 'react';
 
 function App() {
   const [memo, setMemo] = useState(null);
+  // theme localstorage 로 관리하여 다크모드 저장하기 
   const theme = useTheme();
   const fetchFrontMatter = useFrontMatterFetch();
-  const setTheme = useSetThemeAction();
   const memoFrontMatter = async () => {
     const result = await fetchFrontMatter();
     setMemo(result);
     return result;
   };
-
-  useEffect(() => {
-    const hasTheme = localStorage.getItem('theme');
-    if (hasTheme === undefined) {
-      localStorage.setItem('theme', 'true');
-      return setTheme(true);
-    }
-  }, []);
 
   const router = createBrowserRouter(
     [
