@@ -16,6 +16,7 @@ const Container = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 144rem;
+  padding-bottom: 200px;
   /* height: 100vh; */
 
   h3 > a {
