@@ -65,7 +65,7 @@ const Header = ({ className }) => {
 
         <div>
           <DarkTheme onClick={toggleTheme} />
-          <ColorGuide />
+          {/* <ColorGuide /> */}
           <p style={{ opacity: 0.5, fontSize: '1.4rem' }}>
             © 2022. Hyunmin Yi. All rights reserved.
           </p>

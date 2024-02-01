@@ -28,7 +28,7 @@ const ArticleSection = ({ className }) => {
   const [currentItems, setCurrentItems] = useState([]);
   const navigate = useNavigate();
   const frontMatterDatas = useFrontMatter();
-  const numberItems = 6;
+  const numberItems = 4;
   const totalPages = Math.ceil(frontMatterDatas.length / numberItems);
 
   const handleNextPage = () => {
