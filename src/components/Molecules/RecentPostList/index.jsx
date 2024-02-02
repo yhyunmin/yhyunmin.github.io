@@ -11,9 +11,9 @@ const StyledRecentPost = styled(RecentPost)`
   font-size: 1.4rem;
 `;
 
-const RecentPostList = ({ localStorage }) => {
+const RecentPostList = ({ localStorage, className }) => {
   return (
-    <Container>
+    <Container className={className}>
       <h4>최근 본 포스트</h4>
       {localStorage &&
         localStorage.map(post => {

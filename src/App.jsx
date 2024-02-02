@@ -17,7 +17,7 @@ import { useState } from 'react';
 
 function App() {
   const [memo, setMemo] = useState(null);
-  // theme localstorage 로 관리하여 다크모드 저장하기 
+  // theme localstorage 로 관리하여 다크모드 저장하기
   const theme = useTheme();
   const fetchFrontMatter = useFrontMatterFetch();
   const memoFrontMatter = async () => {

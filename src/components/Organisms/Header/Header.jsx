@@ -10,17 +10,20 @@ import ColorGuide from '@components/Atoms/ColorGuide';
 import { Link } from 'react-router-dom';
 import RecentPostList from '@components/Molecules/RecentPostList';
 import { useLocalStorage } from 'src/store/LocalStorageStore';
+
 const HeaderBox = styled.header`
   height: 100%;
   border-right: 0.1rem solid #eee;
   display: flex;
   justify-content: space-between;
-
-  > div {
-    display: flex;
-    flex-direction: column;
+  //mobile 500px
+  @media (max-width: 500px) {
+    border: none;
+    border-bottom: 0.1rem solid #eee;
+    padding-bottom: 2rem;
     gap: 1.2rem;
   }
+
   aside {
     display: flex;
     flex-direction: column;
@@ -42,6 +45,25 @@ const HeaderBox = styled.header`
     }
   }
 `;
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @media (max-width: 500px) {
+    gap: 0.4rem;
+  }
+`;
+const StyledTagList = styled(TagList)``;
+const StyledRecentPostList = styled(RecentPostList)`
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+const Copyright = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;
 const Header = ({ className }) => {
   const toggleTheme = useThemeAction();
   const localStorage = useLocalStorage();
@@ -49,27 +71,29 @@ const Header = ({ className }) => {
   return (
     <>
       <HeaderBox className={`${className} borderColor`}>
-        <div>
+        <HeaderContainer>
           <Logo />
-          <h2>Hyunmin Yi</h2>
-          <p>안녕하세요.이현민 입니다.</p>
+          <div>
+            <h2>Hyunmin Yi</h2>
+            <p>안녕하세요.이현민 입니다.</p>
+          </div>
           <article>
             <ContactList />
           </article>
           <Nav />
-          <TagList />
-        </div>
+          <StyledTagList />
+        </HeaderContainer>
         <div>
-          <RecentPostList localStorage={localStorage} />
+          <StyledRecentPostList localStorage={localStorage} />
         </div>
 
-        <div>
+        <Copyright>
           <DarkTheme onClick={toggleTheme} />
           {/* <ColorGuide /> */}
           <p style={{ opacity: 0.5, fontSize: '1.4rem' }}>
             © 2022. Hyunmin Yi. All rights reserved.
           </p>
-        </div>
+        </Copyright>
       </HeaderBox>
     </>
   );

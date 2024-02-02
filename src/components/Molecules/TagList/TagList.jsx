@@ -8,10 +8,10 @@ const Ul = styled.ul`
   flex-wrap: wrap;
   gap: 12px;
 `;
-const TagList = () => {
+const TagList = ({ className }) => {
   const tagList = useTagList();
   return (
-    <Ul>
+    <Ul className={className}>
       {tagList &&
         tagList.map(tag => (
           <Tag key={tag.id} title={tag.tag} count={tag.count} />

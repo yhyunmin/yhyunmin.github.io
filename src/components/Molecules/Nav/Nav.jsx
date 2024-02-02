@@ -4,7 +4,12 @@ import { styled } from 'styled-components';
 
 const Container = styled.nav``;
 
-const Ul = styled.ul``;
+const Ul = styled.ul`
+  @media (max-width: 500px) {
+    display: flex;
+    gap: 2rem;
+  }
+`;
 const Li = styled.li`
   margin: 8px 0;
   font-weight: 600;
@@ -13,6 +18,7 @@ const Li = styled.li`
     /* text-decoration: underline; */
     border-bottom: 0.125rem solid #333;
   }
+  //mobile 500px
 `;
 const Nav = () => {
   return (
