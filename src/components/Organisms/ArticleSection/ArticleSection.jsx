@@ -9,6 +9,9 @@ const ButtonBox = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  @media (max-width: 500px) {
+    padding-bottom: 2rem;
+  }
   button {
     font-size: 1.6rem;
     font-weight: 600;
