@@ -12,6 +12,7 @@ const StyledTag = styled.div`
   text-transform: capitalize;
   border-color: ${props => props.theme.borderColor};
   background-color: ${props => props.theme.elavateColor};
+  cursor: pointer;
   p {
     opacity: 0.9;
     font-size: 1.4rem;
@@ -25,9 +26,9 @@ const StyledTag = styled.div`
     line-height: 1.2rem;
   }
 `;
-const Tag = ({ title, count }) => {
+const Tag = ({ title, count, ...props }) => {
   return (
-    <li>
+    <li {...props}>
       <StyledTag className='borderColor'>
         <p>{title}</p>
         <span>({count})</span>

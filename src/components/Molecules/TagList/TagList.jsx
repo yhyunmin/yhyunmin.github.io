@@ -11,10 +11,11 @@ const Ul = styled.ul`
 `;
 const TagList = ({ className }) => {
   const navigate = useNavigate();
-  const handleClick = ({ title }) => {
-    navigate(`/articles?tag=${title}`);
-  };
   const tagList = useTagList();
+  const handleClick = tag => {
+    console.log('clicked');
+    navigate(`/articles?tag=${tag}`);
+  };
   return (
     <Ul className={className}>
       {tagList &&
@@ -23,7 +24,7 @@ const TagList = ({ className }) => {
             key={tag.id}
             title={tag.tag}
             count={tag.count}
-            onClick={handleClick(tag.tag)}
+            onClick={() => handleClick(tag.tag)}
           />
         ))}
     </Ul>
