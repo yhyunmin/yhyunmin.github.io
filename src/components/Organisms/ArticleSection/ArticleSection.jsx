@@ -27,6 +27,7 @@ const ArticleSection = ({ className }) => {
   // const { page } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const page = searchParams.get('page');
+  const tag = searchParams.get('tag');
   const [currentPage, setCurrentPage] = useState(parseInt(page));
   const [currentItems, setCurrentItems] = useState([]);
   const navigate = useNavigate();
@@ -69,6 +70,17 @@ const ArticleSection = ({ className }) => {
     navigate(`/articles?page=${page}`);
   }, [page, navigate, totalPages]);
 
+  useEffect(() => {
+    //if querystring has tag, currentItems find which has a tag
+    if (tag) {
+      setCurrentItems(
+        currentItems.filter(item => item.attributes.tags.includes(tag))
+      );
+    }
+    return () => {
+      setCurrentItems(frontMatterDatas);
+    };
+  }, []);
   return (
     <main className={className}>
       <ArticleList frontMatterDatas={currentItems} />
