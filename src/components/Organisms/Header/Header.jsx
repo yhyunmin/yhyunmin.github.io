@@ -6,8 +6,6 @@ import DarkTheme from '@components/Atoms/DarkTheme/DarkTheme';
 import TagList from '@components/Molecules/TagList/TagList';
 import { styled } from 'styled-components';
 import { useThemeAction } from 'src/store/ThemeStore';
-import ColorGuide from '@components/Atoms/ColorGuide';
-import { Link } from 'react-router-dom';
 import RecentPostList from '@components/Molecules/RecentPostList';
 import { useLocalStorage } from 'src/store/LocalStorageStore';
 
@@ -91,7 +89,7 @@ const Header = ({ className }) => {
           <DarkTheme onClick={toggleTheme} />
           {/* <ColorGuide /> */}
           <p style={{ opacity: 0.5, fontSize: '1.4rem' }}>
-            © 2022. Hyunmin Yi. All rights reserved.
+            © 2023. Hyunmin Yi. All rights reserved.
           </p>
         </Copyright>
       </HeaderBox>

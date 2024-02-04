@@ -1,11 +1,10 @@
 import Profile from '@components/Molecules/Profile';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { styled } from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import DarkTheme from '@components/Atoms/DarkTheme/DarkTheme';
 import { useThemeAction } from 'src/store/ThemeStore';
-import { Link, useNavigate } from 'react-router-dom';
-import { ReactComponent as LeftArrowIcon } from '@img/mdi_arrow_left.svg';
+import { useNavigate } from 'react-router-dom';
 import BackBtn from '@components/Atoms/BackBtn';
 import { generateSlug } from 'src/util/generateSlug';
 const Container = styled.div`
