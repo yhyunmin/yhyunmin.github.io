@@ -71,16 +71,11 @@ const ArticleSection = ({ className }) => {
   }, [page, navigate, totalPages]);
 
   useEffect(() => {
-    //if querystring has tag, currentItems find which has a tag
-    console.log(currentItems, 'currentItems');
-
-    //find tags in currentItems and filter by tag (to lowercase)
     if (!tag) {
       setCurrentItems(frontMatterDatas);
     }
     if (tag) {
       setCurrentItems(
-        //find same tags nommater has a case is lower,
         frontMatterDatas.filter(
           item => item.attributes.tags.toLowerCase() === tag.toLowerCase()
         )
