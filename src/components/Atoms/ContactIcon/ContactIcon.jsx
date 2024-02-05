@@ -16,7 +16,7 @@ const Icon = styled.li`
     height: 100%;
   }
 `;
-const ContactIcon = ({ href, icon, alt, ...props }) => {
+const ContactIcon = ({ href, alt }) => {
   const Icon2 =
     alt === 'Email' ? EmailIcon : alt === 'Github' ? GithubIcon : resumeIcon;
   return (

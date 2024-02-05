@@ -7,6 +7,7 @@ import profileImg from '@img/profile.png';
 const Container = styled.div`
   display: flex;
   gap: 12px;
+  align-items: center;
 `;
 const NameBox = styled.div`
   display: flex;

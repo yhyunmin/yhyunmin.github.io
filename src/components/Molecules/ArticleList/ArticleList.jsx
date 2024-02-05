@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Article from '@components/Atoms/Article/Article';
 import { useNavigate } from 'react-router-dom';
 import { usePostAction } from 'src/store/PostStore';

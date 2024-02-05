@@ -6,7 +6,7 @@ import App from './App';
 // react 18
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <StrictMode>
-  <App />
-  //  </StrictMode>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );

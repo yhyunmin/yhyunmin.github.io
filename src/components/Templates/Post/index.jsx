@@ -11,13 +11,20 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   padding-top: 40px;
+  //media 500px
+  @media (max-width: 500px) {
+    padding-top: 0;
+  }
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 144rem;
   padding-bottom: 200px;
   /* height: 100vh; */
-
+  @media (max-width: 500px) {
+    width: 100%;
+    padding-bottom: 80px;
+  }
   h3 > a {
     color: ${({ theme }) => theme.subTitle};
   }
@@ -27,11 +34,21 @@ const SectionWrapper = styled.div`
   justify-content: space-between;
   /* 반응형 */
   /* flex-wrap: wrap; */
+  @media (max-width: 500px) {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
 `;
 const BannerSection = styled.aside`
   width: 32.9rem;
   display: flex;
   flex-direction: column;
+  @media (max-width: 500px) {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
   /* 반응형 */
   /* flex-direction: row;
   justify-content: space-between;
@@ -43,10 +60,18 @@ const BannerSection = styled.aside`
 const PostSection = styled.section`
   width: 104.3rem;
   order: 2;
+  @media (max-width: 500px) {
+    width: 100%;
+    order: 1;
+  }
 `;
 const Title = styled.h1`
   text-align: center;
   font-size: 4.8rem;
+  @media (max-width: 500px) {
+    margin: 20px 0;
+    padding: 0 20px;
+  }
   width: 100%;
   padding: 20px 0;
   margin: 20px 0;
@@ -65,6 +90,10 @@ const BookmarkNav = styled.ul`
   background-color: ${({ theme }) => theme.elavateColor};
   border-radius: 8px;
   padding: 1.2rem 2.4rem;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
   li {
     list-style: none;
     margin: 0.4rem;
@@ -79,6 +108,7 @@ const BookmarkNav = styled.ul`
 `;
 
 const Contents = styled.div`
+  ul li,
   ol li {
     margin-left: 1em;
   }

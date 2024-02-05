@@ -20,6 +20,7 @@ const HeaderBox = styled.header`
     border-bottom: 0.1rem solid #eee;
     padding-bottom: 2rem;
     gap: 1.2rem;
+    justify-content: flex-start;
   }
 
   aside {

@@ -28,6 +28,9 @@ span {
   sans-serif;
   letter-spacing: 0.032rem;
   line-height: 1.625;
+  @media (max-width: 500px) {
+    line-height: 2;
+  }
 }
 h1 {
   font-size:2.8rem;
@@ -55,10 +58,19 @@ pre {
   margin: 2rem 0;
   padding: 4rem;
   border-radius: 12px;
+  //media 500px
+  @media (max-width: 500px) {
+    margin: 1.2rem 0;
+  padding: 2rem;
+  text-wrap:balance;
+  }
 }
 code {
   font-size: 1.6rem;
   font-family: D2coding;
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+  }
 }
 blockquote {
   position: relative;

@@ -1,6 +1,6 @@
 const { create } = require('zustand');
 
-const usePostStore = create((set, get) => ({
+const usePostStore = create(set => ({
   postData: {},
   //action
   action: {

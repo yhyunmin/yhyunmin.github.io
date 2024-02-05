@@ -35,6 +35,7 @@ const ContentsLayout = styled.main`
   width: 92.4rem;
   @media (max-width: 500px) {
     width: 100%;
+    height: 100%;
   }
 `;
 

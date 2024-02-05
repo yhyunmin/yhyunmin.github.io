@@ -13,7 +13,7 @@ import About from '@components/Organisms/About/About';
 import Error from 'src/Pages/Error';
 import { useFrontMatterFetch } from './store/ArticleStore';
 import { useTheme } from './store/ThemeStore';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function App() {
   const [memo, setMemo] = useState(null);
@@ -62,12 +62,12 @@ function App() {
   );
 
   return (
-    <div className='App'>
-      <ThemeProvider theme={theme ? light : dark}>
-        <GlobalStyle />
+    <ThemeProvider theme={theme ? light : dark}>
+      <GlobalStyle />
+      <div className='App'>
         <RouterProvider router={router} fallbackElement={<Loading />} />
-      </ThemeProvider>
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
