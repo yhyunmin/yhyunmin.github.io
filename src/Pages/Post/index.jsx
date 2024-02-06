@@ -20,7 +20,7 @@ const Post = () => {
   // observer.observe();
 
   useEffect(() => {
-    console.log(getSummary);
+    console.log(getSummary, 'getSummary');
   }, []);
 
   return (

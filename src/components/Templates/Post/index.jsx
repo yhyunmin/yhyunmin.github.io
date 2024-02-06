@@ -122,14 +122,12 @@ const Template = ({ post, summary }) => {
     if (!summary) {
       return;
     }
-    // Use map instead of forEach to create an array of slugs
     const newSlugs = summary.map(element =>
       generateSlug(element).replace(/^-/, '')
     );
 
-    // Update the state with the array of slugs
     setContents(newSlugs);
-    console.log(newSlugs);
+    console.log(newSlugs, 'newSlugs');
   }, [summary]);
 
   const MarkdownComponents = useMemo(() => {
@@ -175,13 +173,16 @@ const Template = ({ post, summary }) => {
           <SideBar>
             <BookmarkNav>
               {contents &&
-                contents.map((heading3Title, index) => (
-                  <li key={index}>
-                    <a href={`#${heading3Title}`} key={index}>
-                      {heading3Title}
-                    </a>
-                  </li>
-                ))}
+                summary.map((title, index) => {
+                  const clearTitle = title.replace(/#/g, '');
+                  return (
+                    <li key={index}>
+                      <a href={`#${clearTitle}`} key={index}>
+                        {clearTitle}
+                      </a>
+                    </li>
+                  );
+                })}
             </BookmarkNav>
             <BackBtn onClick={() => navigate('/')} />
           </SideBar>
