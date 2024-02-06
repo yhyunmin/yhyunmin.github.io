@@ -129,6 +129,7 @@ const Template = ({ post, summary }) => {
 
     // Update the state with the array of slugs
     setContents(newSlugs);
+    console.log(newSlugs);
   }, [summary]);
 
   const MarkdownComponents = useMemo(() => {
@@ -147,7 +148,6 @@ const Template = ({ post, summary }) => {
               : []
           )
           .join('');
-
         const slug = generateSlug(heading);
         return (
           <h3 id={slug}>

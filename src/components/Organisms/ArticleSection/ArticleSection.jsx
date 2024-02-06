@@ -34,7 +34,8 @@ const ArticleSection = ({ className }) => {
   const frontMatterDatas = useFrontMatter();
   const numberItems = 4;
   const totalPages = Math.ceil(frontMatterDatas.length / numberItems);
-
+  const startIndex = (currentPage - 1) * numberItems;
+  const endIndex = startIndex + numberItems;
   const handleNextPage = () => {
     if (!(currentPage < totalPages)) {
       return null;
@@ -51,8 +52,6 @@ const ArticleSection = ({ className }) => {
   };
 
   useEffect(() => {
-    const startIndex = (currentPage - 1) * numberItems;
-    const endIndex = startIndex + numberItems;
     const currentItems = frontMatterDatas.slice(startIndex, endIndex);
     setCurrentItems(currentItems);
   }, [currentPage, numberItems, frontMatterDatas]);
@@ -64,7 +63,7 @@ const ArticleSection = ({ className }) => {
     }
     if (page > totalPages) {
       setCurrentPage(1);
-      navigate('/articles?page=1');
+      navigate(`/articles?page=1`);
       return;
     }
     navigate(`/articles?page=${page}`);
@@ -76,9 +75,11 @@ const ArticleSection = ({ className }) => {
     }
     if (tag) {
       setCurrentItems(
-        frontMatterDatas.filter(
-          item => item.attributes.tags.toLowerCase() === tag.toLowerCase()
-        )
+        frontMatterDatas
+          .filter(
+            item => item.attributes.tags.toLowerCase() === tag.toLowerCase()
+          )
+          .slice(startIndex, endIndex)
       );
     }
   }, [tag, frontMatterDatas]);
