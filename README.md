@@ -5,12 +5,18 @@
 
 ## 사용한 기술 스택
 
+### FRONTEND
+
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Zustand](https://img.shields.io/badge/zustand-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+
+Lang : **Javascript,Markdown**  
+Lib & Framework : **React, Styled-Components, Zustand**  
+Deploy : **Github pages**
 
 ## 프로젝트 개요
 
@@ -57,6 +63,7 @@ local Storage를 이용하여 최근 본 포스트를 구현. 이때, 가장 최
 - 디자인 패턴에 맞춘 코드 스플리팅 (진행중)
 - Intersection Observer API 사용하여 TOC 텍스트 볼드 처리
 - 이미지,폰트 최적화,
+- 폴더 구조 최적화
 
 ## 폴더 구조
 
