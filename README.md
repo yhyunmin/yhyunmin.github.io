@@ -64,6 +64,7 @@ local Storage를 이용하여 최근 본 포스트를 구현. 이때, 가장 최
 - Intersection Observer API 사용하여 TOC 텍스트 볼드 처리
 - 이미지,폰트 최적화,
 - 폴더 구조 최적화
+- CRA 사용대신 vite
 
 ## 폴더 구조
 
