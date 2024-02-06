@@ -11,7 +11,7 @@ const StyledTag = styled.div`
   padding: 4px 8px;
   text-transform: capitalize;
   border-color: ${props => props.theme.borderColor};
-  background-color: ${props => props.theme.elavateColor};
+  background-color: ${props => props.theme.elevateColor};
   cursor: pointer;
   p {
     opacity: 0.9;

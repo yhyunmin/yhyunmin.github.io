@@ -5,7 +5,7 @@ export const light = {
   primary: '#5022C2',
   borderColor: '#D6D5D8',
   iconColor: '#261F37',
-  elavateColor: '#F8F8F8',
+  elevateColor: '#F8F8F8',
 };
 
 export const dark = {
@@ -15,7 +15,7 @@ export const dark = {
   primary: '#CBBDED',
   borderColor: '#413F46',
   iconColor: '#D8D8D8',
-  elavateColor: '#282828',
+  elevateColor: '#282828',
 };
 
 const size = {

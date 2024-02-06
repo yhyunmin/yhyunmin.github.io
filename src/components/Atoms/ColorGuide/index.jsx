@@ -8,7 +8,7 @@ const ColorGuide = () => {
     <aside
       style={
         {
-          // backgroundColor: color.elavateColor,
+          // backgroundColor: color.elevvateColor,
           // border: `1px solid ${color.borderColor}`,
         }
       }>

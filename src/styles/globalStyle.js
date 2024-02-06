@@ -136,18 +136,18 @@ a {
   color: ${({ theme }) => theme.primary};
 }
 button { 
-  background-color: ${({ theme }) => theme.elavateColor};
+  background-color: ${({ theme }) => theme.elevateColor};
   color: ${({ theme }) => theme.heading};
 }
 pre {
-  background-color: ${({ theme }) => theme.elavateColor};
+  background-color: ${({ theme }) => theme.elevateColor};
 }
 code {
-  background-color: ${({ theme }) => theme.elavateColor};
+  background-color: ${({ theme }) => theme.elevateColor};
   color : ${({ theme }) => theme.subtitle};
 }
 blockquote {
-  background-color: ${({ theme }) => theme.elavateColor};
+  background-color: ${({ theme }) => theme.elevateColor};
   color : ${({ theme }) => theme.subtitle};
   
 }

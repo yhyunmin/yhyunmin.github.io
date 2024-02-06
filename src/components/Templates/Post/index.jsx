@@ -87,7 +87,7 @@ const BookmarkNav = styled.ul`
   margin: 2rem;
   /* border: 1px solid #aaa; */
   /* border-color: ${({ theme }) => theme.borderColor}; */
-  background-color: ${({ theme }) => theme.elavateColor};
+  background-color: ${({ theme }) => theme.elevateColor};
   border-radius: 8px;
   padding: 1.2rem 2.4rem;
 
