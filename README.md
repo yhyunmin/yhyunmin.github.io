@@ -56,7 +56,7 @@ local Storage를 이용하여 최근 본 포스트를 구현. 이때, 가장 최
 // 이미지
 
 마크다운 본문을 파싱 후, 제목 태그만 따로 가져와  
-링크형식의 목차를 구현. 링크 클릭시 해당 인덱스로 smooth scrolling 됨.
+링크형식의 목차를 구현. 링크 클릭시 scroll-behavior: smooth; 스타일링으로 해당 인덱스로 smooth scrolling 됨.
 
 ## 개선 목표
 
