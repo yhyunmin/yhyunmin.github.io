@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Template from '@components/Templates/Post';
 import { useParams } from 'react-router-dom';
 import { useFrontMatter } from 'src/store/ArticleStore';
+import smoothscroll from 'smoothscroll-polyfill';
 const Post = () => {
   const { slug } = useParams();
   const fmData = useFrontMatter();
@@ -20,7 +21,7 @@ const Post = () => {
   // observer.observe();
 
   useEffect(() => {
-    console.log(getSummary, 'getSummary');
+    smoothscroll.polyfill();
   }, []);
 
   return (
