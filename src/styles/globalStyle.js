@@ -56,11 +56,12 @@ button {
 /* markdown style */
 pre {
   margin: 2rem 0;
-  padding: 4rem;
+  padding: 1.2rem 2.4rem;
   border-radius: 12px;
   //media 500px
   @media (max-width: 500px) {
     margin: 1.2rem 0;
+    border-radius: 8px;
   padding: 2rem;
   text-wrap:balance;
   }
@@ -69,13 +70,18 @@ code {
   font-size: 1.6rem;
   font-family: D2coding;
   @media (max-width: 500px) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 blockquote {
+  display: flex;
+  align-items: center;
   position: relative;
-  margin: 2rem 0;
-  padding: 2rem 4rem;
+  padding: 0.8rem 2rem;
+  margin-bottom: 1.2rem;
+  p{
+    margin-bottom:  0 !important;
+  }
   font-weight: 600;
   &::before {
     position: absolute;

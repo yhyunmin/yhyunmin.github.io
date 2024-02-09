@@ -24,9 +24,7 @@ const Post = () => {
     smoothscroll.polyfill();
   }, []);
 
-  return (
-    <div>{findPost && <Template post={findPost} summary={getSummary} />}</div>
-  );
+  return <>{findPost && <Template post={findPost} summary={getSummary} />}</>;
 };
 
 export default Post;

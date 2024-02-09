@@ -25,6 +25,7 @@ const Container = styled.div`
     width: 100%;
     padding-bottom: 80px;
   }
+
   h3 a {
     color: ${({ theme }) => theme.subtitle} !important;
     font-weight: 400;
@@ -59,7 +60,8 @@ const BannerSection = styled.aside`
   order: 1;
 `;
 const PostSection = styled.section`
-  width: 104.3rem;
+  width: 68rem;
+  margin-right: 32.9rem;
   order: 2;
   @media (max-width: 500px) {
     width: 100%;
@@ -109,9 +111,24 @@ const BookmarkNav = styled.ul`
 `;
 
 const Contents = styled.div`
+  h3 {
+    line-height: 3;
+  }
+  p {
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 1.4rem;
+    @media (max-width: 500px) {
+      margin-bottom: 0.8rem;
+    }
+  }
   ul li,
   ol li {
     margin-left: 1em;
+    margin-bottom: 1.4rem;
+    @media (max-width: 500px) {
+      margin-bottom: 0.8rem;
+    }
   }
 `;
 const Template = ({ post, summary }) => {
