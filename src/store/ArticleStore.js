@@ -36,6 +36,7 @@ const useFrontMatterStore = create((set, get) => ({
       const context = await require.context('src/contents', false, /\.md$/);
       const fileNamesList = await context
         .keys()
+        .reverse()
         .map(fileName => fileName.replace(/^\.\//, ''));
 
       const promises = fileNamesList.map(async fileName => {
