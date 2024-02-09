@@ -117,6 +117,30 @@ const Template = ({ post, summary }) => {
   const toggleTheme = useThemeAction();
   const navigate = useNavigate();
   const [contents, setContents] = useState([]);
+  const [headings, setHeadings] = useState([]);
+  //
+  //
+
+  useEffect(() => {
+    const h3s = document.querySelectorAll('h3');
+    setHeadings([...h3s]);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(e => {
+      e.forEach(entry => {
+        entry.isIntersecting
+          ? (entry.target.style.fontWeight = '700')
+          : (entry.target.style.fontWeight = '400');
+      });
+    });
+    headings.forEach(header => {
+      observer.observe(header);
+      console.log(header);
+    });
+  }, []);
+  //
+  //
 
   useEffect(() => {
     if (!summary) {

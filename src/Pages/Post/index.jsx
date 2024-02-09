@@ -25,9 +25,7 @@ const Post = () => {
   }, []);
 
   return (
-    <div>
-      <Template post={findPost} summary={getSummary} />
-    </div>
+    <div>{findPost && <Template post={findPost} summary={getSummary} />}</div>
   );
 };
 
