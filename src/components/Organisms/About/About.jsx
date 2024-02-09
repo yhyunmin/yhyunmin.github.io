@@ -7,7 +7,7 @@ const About = () => {
       <p>문화 활동과 휴식을 좋아하는 신입 프론트엔드 개발자 이현민 입니다.</p>
       <p>UX/UI에 관심있는 프론트엔드 주니어 개발자입니다.</p>
       <p>손과 엉덩이로 하는 개발을 추구합니다.</p>
-      <img src='https://ghchart.rshah.org/yhyunmin' alt='이현민 잔디' />
+      <img src='https://ghchart.rshah.org/219138/yhyunmin' alt='이현민 잔디' />
       <p>
         포트폴리오 확인은{' '}
         <span
