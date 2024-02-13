@@ -196,7 +196,7 @@ const Template = ({ post, summary }) => {
               {contents &&
                 summary.map((title, index) => {
                   const clearTitle = title.replace(/#/g, '');
-                  const slug = generateSlug(title);
+                  const slug = generateSlug(title).replace(/^-/, '');
                   return (
                     <li key={index}>
                       <a href={`#${slug}`} key={index}>
