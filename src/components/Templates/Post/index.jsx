@@ -112,7 +112,10 @@ const BookmarkNav = styled.ul`
 
 const Contents = styled.div`
   h3 {
-    line-height: 3;
+    line-height: 2.8;
+    a {
+      display: inline;
+    }
   }
   p {
     line-height: 2;
