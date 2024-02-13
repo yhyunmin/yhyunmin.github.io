@@ -64,12 +64,12 @@ label {
 }
 
 /* balance 최신속성을 이용해서 제목 자르기  */
-h1,
+/* h1,
 h2,
 h3,
 h4 {
   text-wrap: balance;
-}
+} */
 
 /* 이미지,사진 태그 활용하기 쉽게*/
 img,
