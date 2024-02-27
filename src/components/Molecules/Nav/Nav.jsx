@@ -29,11 +29,11 @@ const Nav = () => {
             Articles
           </Link>
         </Li>
-        <Li>
+        {/* <Li>
           <Link to='/about' className='navColor'>
             About Me
           </Link>
-        </Li>
+        </Li> */}
       </Ul>
     </Container>
   );
