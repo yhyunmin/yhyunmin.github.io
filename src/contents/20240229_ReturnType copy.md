@@ -74,4 +74,27 @@ type tests = [
 ### 튜플(tuple)과 배열([])의 차이
 
 `type StringArray = string[]` 이런식으로 사용할 수 있지만, 배열의 길이가 몇일지 알 수 없지만
-`type STringTuple = [string, ]` 와 같이 Tuple 타입은 배열의 길이까지 지정하여 사용할 수 있다.
+`type STringTuple = [string, ]` 와 같이 Tuple 타입은 배열의 길이까지 지정하여 사용할 수 있다. 명시적으로 type을 지정 할 수 있다 ``type STringTuple = [string,string ] 이런식`
+
+### 프로미스를 반환하는 Awaited<>
+
+함수의 프로미스 반환타입을 가져오는 타입 유틸리티가 있다.
+
+```js
+const getUser = () => {
+  return Promise.resolve({
+    id: '123',
+    name: 'John',
+    email: 'john@example.com',
+  });
+};
+
+//일때
+type ReturnPromise = Awaited<ReturnType<typeof getUser>>;
+
+type tests = [
+  Expect<Equal<ReturnValue, { id: string, name: string, email: string }>>
+];
+```
+
+`type ReturnPromise = Awaited<ReturnType<typeof getUser>>;` 이런식으로 Awaited 가 Promise를 벗겨서 값을 알려준다.
