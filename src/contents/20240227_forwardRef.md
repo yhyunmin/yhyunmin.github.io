@@ -1,7 +1,7 @@
 ---
-title: 'React의 FowardRef란 '
+title: 'React의 ForwardRef란 '
 date: '2024-02-26'
-slug: '20240226-야그니'
+slug: 'React의-ForwardRef란'
 tags: 'React'
 description: '엘리먼트에 접근하는 ref는 알지만...forwardRef?'
 ---

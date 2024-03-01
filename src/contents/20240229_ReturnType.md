@@ -1,7 +1,7 @@
 ---
-title: '유틸리티 타입 : ReturnType '
+title: '유틸리티 타입 ReturnType'
 date: '2024-02-26'
-slug: '20240226-야그니'
+slug: '유틸리티-타입-ReturnType'
 tags: 'Typescript'
 description: '함수의 리턴값 타입과 파라미터 타입을 추론해보자.'
 ---
