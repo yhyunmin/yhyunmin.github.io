@@ -1,5 +1,5 @@
 ---
-title: 'Extract,Exclude'
+title: '유틸리티타입 Extract,Exclude'
 date: '2024-03-03'
 slug: 'Extract-Exclude'
 tags: 'Typescript'
