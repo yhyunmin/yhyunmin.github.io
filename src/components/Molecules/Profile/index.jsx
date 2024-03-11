@@ -27,7 +27,13 @@ const Profile = () => {
   return (
     <>
       <Container>
-        <img src={profileImg} alt='이현민 블로그' width={48} height={48} />
+        <img
+          src={profileImg}
+          alt='이현민 블로그'
+          width={48}
+          height={48}
+          className='profileImg'
+        />
         <NameBox>
           <p className='korfont'>이 현민</p>
           <Link target='_blank' to='https://github.com/yhyunmin'>

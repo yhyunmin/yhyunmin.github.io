@@ -108,3 +108,7 @@ button {
 a {
   text-decoration: none;
 }
+
+.profileImg {
+  border-radius: 9999;
+}
