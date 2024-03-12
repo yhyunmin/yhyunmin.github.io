@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.a76c28ae.css",
-    "main.js": "/static/js/main.bfb26bd2.js",
+    "main.js": "/static/js/main.40673974.js",
     "static/js/712.18c617cd.chunk.js": "/static/js/712.18c617cd.chunk.js",
     "static/media/Hans.ttf": "/static/media/Hans.4dee6b65a0cac70d4a80.ttf",
     "static/media/D2Coding.woff2": "/static/media/D2Coding.626cbbbbca60e9d87df5.woff2",
+    "static/media/profile.png": "/static/media/profile.5fba94075c2da6cde47b.png",
     "static/media/Pretendard-Bold.woff2": "/static/media/Pretendard-Bold.0c6f5e225ff28f456183.woff2",
     "static/media/Pretendard-SemiBold.woff2": "/static/media/Pretendard-SemiBold.d5ded8ad2884e7855bb1.woff2",
     "static/media/Pretendard-Regular.woff2": "/static/media/Pretendard-Regular.38bed7de46e7b9049ced.woff2",
     "static/media/Pretendard-ExtraLight.woff2": "/static/media/Pretendard-ExtraLight.6a3dddfd84c05761ef44.woff2",
-    "static/media/profile.png": "/static/media/profile.6617e83b71fc55bf60cd.png",
     "static/media/20240201_블로그제작기-0.md": "/static/media/20240201_블로그제작기-0.f1db8609c92d5c6b6527.md",
     "static/media/20240209_블로그제작기-1.md": "/static/media/20240209_블로그제작기-1.7d8739a7c315abd0d5c8.md",
     "static/media/20240111_test4.md": "/static/media/20240111_test4.a9c1ddd96d5391eaa6ad.md",
@@ -37,10 +37,10 @@
     "static/media/mdi_arrow_left.svg": "/static/media/mdi_arrow_left.c1960b673fb15c943c07f31435093991.svg",
     "static/media/mdi_arrow_right.svg": "/static/media/mdi_arrow_right.ca9222d6304d95bc4314e3ce4e11ecd5.svg",
     "main.a76c28ae.css.map": "/static/css/main.a76c28ae.css.map",
-    "main.bfb26bd2.js.map": "/static/js/main.bfb26bd2.js.map"
+    "main.40673974.js.map": "/static/js/main.40673974.js.map"
   },
   "entrypoints": [
     "static/css/main.a76c28ae.css",
-    "static/js/main.bfb26bd2.js"
+    "static/js/main.40673974.js"
   ]
 }
