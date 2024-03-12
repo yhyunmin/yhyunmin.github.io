@@ -22,10 +22,10 @@ const Button = styled.button`
     top: 0;
     left: 0;
     /* opacity: 0.5; */
-    transition: all 0.2s linear;
+    /* transition: all 0.2s linear; */
   }
   svg {
-    transition: all 0.2s linear;
+    /* transition: all 0.2s linear; */
   }
 `;
 

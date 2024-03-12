@@ -11,6 +11,9 @@ const Container = styled.h1`
     width: fit-content;
     text-indent: 0%;
   }
+  img {
+    border-radius: 999px;
+  }
 `;
 const Logo = () => {
   return (

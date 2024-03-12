@@ -8,6 +8,9 @@ const Container = styled.div`
   display: flex;
   gap: 12px;
   align-items: center;
+  img {
+    border-radius: 9999;
+  }
 `;
 const NameBox = styled.div`
   display: flex;
@@ -30,8 +33,8 @@ const Profile = () => {
         <img
           src={profileImg}
           alt='이현민 블로그'
-          width={48}
-          height={48}
+          width={64}
+          height={65}
           className='profileImg'
         />
         <NameBox>

@@ -11,19 +11,19 @@ const Btn = styled.button`
   order: 3;
   color: ${({ theme }) => theme.primary};
   margin-left: 1.2rem;
-  svg {
+  /* svg {
     fill: ${({ theme }) => theme.primary};
     transform: translateX(50%);
     opacity: 0;
     transition: ease-in-out 0.2s all;
-  }
-  &:hover {
+  } */
+  /* &:hover {
     opacity: 1;
     svg {
       transform: translateX(0%);
       opacity: 0.9;
     }
-  }
+  } */
 `;
 
 const BackBtn = ({ ...props }) => {

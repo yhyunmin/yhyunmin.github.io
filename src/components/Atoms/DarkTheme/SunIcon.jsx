@@ -2,9 +2,9 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 const SVG = styled.svg`
-  & path:not(.sun) {
+  /* & path:not(.sun) {
     transition: transform 0.5s linear, opacity 0.5s linear;
-  }
+  } */
 `;
 const SunIcon = ({ width, height, fill, ...props }) => {
   return (

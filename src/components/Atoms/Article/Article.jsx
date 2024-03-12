@@ -60,19 +60,19 @@ const ReadMore = styled.a`
   font-weight: 600;
   opacity: 0.9;
   z-index: 2;
-  svg {
+  /* svg {
     z-index: -1;
     transform: translateX(-50%);
     opacity: 0;
-    transition: ease-in-out 0.2s all;
-  }
+    /* transition: ease-in-out 0.2s all; */
+  /* }
   &:hover {
     opacity: 1;
     svg {
       transform: translateX(0%);
       opacity: 0.9;
     }
-  }
+  } */
 `;
 
 const Article = ({ attributes = {}, onClick }) => {
